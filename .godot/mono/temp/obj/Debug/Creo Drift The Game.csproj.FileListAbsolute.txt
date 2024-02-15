@@ -1,0 +1,35 @@
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\bin\Debug\Creo Drift The Game.deps.json
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\bin\Debug\Creo Drift The Game.runtimeconfig.json
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\bin\Debug\Creo Drift The Game.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\bin\Debug\Creo Drift The Game.pdb
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.csproj.AssemblyReference.cache
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.AssemblyInfo.cs
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.csproj.CopyComplete
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\refint\Creo Drift The Game.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.pdb
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.genruntimeconfig.cache
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\.godot\mono\temp\obj\Debug\ref\Creo Drift The Game.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\bin\Debug\Creo Drift The Game.deps.json
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\bin\Debug\Creo Drift The Game.runtimeconfig.json
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\bin\Debug\Creo Drift The Game.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\bin\Debug\Creo Drift The Game.pdb
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.csproj.AssemblyReference.cache
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.AssemblyInfo.cs
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.sourcelink.json
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.csproj.CopyComplete
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\refint\Creo Drift The Game.dll
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.pdb
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\Creo Drift The Game.genruntimeconfig.cache
+C:\Users\hp\Documents\Godot Projects\Creo Drift The Game\Creo_Drift_The_Game\.godot\mono\temp\obj\Debug\ref\Creo Drift The Game.dll

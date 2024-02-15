@@ -1,0 +1,10 @@
+res://Scenes/world.tscn
+res://Assets/Models/Car/Car_Body.tres
+res://Assets/Models/Car/Car_Glass.tres
+res://Assets/Models/Map/Materials/Desert.tres
+res://Assets/Models/Map/Materials/Road.tres
+res://Assets/Models/Particle Mesh/Materials/SpeedParticle_Mat.tres
+res://Assets/Models/BillBoard/Materials/SteelBlack.tres
+res://Assets/Models/BillBoard/Materials/Sign.tres
+res://Assets/Models/BillBoard/Materials/WhiteLight.tres
+res://Scenes/player.tscn

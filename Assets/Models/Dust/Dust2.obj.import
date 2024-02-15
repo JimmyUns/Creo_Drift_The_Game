@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dykeu1c2h22bf"
+path="res://.godot/imported/Dust2.obj-e1bec79753c26118e4c262dbb37d6986.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Dust2.obj-e1bec79753c26118e4c262dbb37d6986.mesh"]
+
+source_file="res://Assets/Models/Dust/Dust2.obj"
+dest_files=["res://.godot/imported/Dust2.obj-e1bec79753c26118e4c262dbb37d6986.mesh", "res://.godot/imported/Dust2.obj-e1bec79753c26118e4c262dbb37d6986.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

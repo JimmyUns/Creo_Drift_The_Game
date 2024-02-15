@@ -1,0 +1,15 @@
+AudioStreamPlayer
+Node3D
+TextureRect
+AnimationPlayer
+HSplitContainer
+GridContainer
+CanvasLayer
+Container
+Control
+GPUParticles3D
+Label
+RichTextLabel
+Label3D
+MeshInstance3D
+CollisionShape3D
