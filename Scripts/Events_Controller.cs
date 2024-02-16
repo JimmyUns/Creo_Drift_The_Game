@@ -54,7 +54,7 @@ public partial class Events_Controller : Node3D
 				break;
 
 			case 3:
-				if (currentTime > 18.830f)
+				if (currentTime > 24.599)
 				{
 					Debug.Print(playerPos.GlobalPosition.Z.ToString());
 					eventsIndex++;
@@ -62,7 +62,7 @@ public partial class Events_Controller : Node3D
 				}
 				break;
 			case 4:
-				if (currentTime > 19.540f)
+				if (currentTime > 25.576)
 				{
 					Debug.Print(playerPos.GlobalPosition.Z.ToString());
 					eventsIndex++;
@@ -80,6 +80,11 @@ public partial class Events_Controller : Node3D
 	{
 		eventAnim.Play("Billboard_Event_2");
 
+	}
+	
+	private void _on_area_checker_body_entered(Node3D body)
+	{
+		StopGame();
 	}
 	
 	public void StopGame()

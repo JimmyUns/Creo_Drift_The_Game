@@ -1,4 +1,5 @@
-res://Assets/Models/Props/Materials
+res://Scenes
+res://Assets/Sprites
 C:/Users/hp/Desktop/Creo Drift The Game
 C:/Windows
 res://Scripts
@@ -7,6 +8,5 @@ res://Assets/Models/BillBoard/Materials
 res://Assets/Models/Map/Materials
 res://Scripts/GUI
 res://Assets/Models/Dust
-res://Scenes
 res://
 res://Assets/Models/Car

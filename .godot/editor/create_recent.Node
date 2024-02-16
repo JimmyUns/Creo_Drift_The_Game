@@ -1,5 +1,10 @@
-AudioStreamPlayer
 Node3D
+CollisionShape3D
+StaticBody3D
+Area3D
+MeshInstance3D
+RigidBody3D
+AudioStreamPlayer
 TextureRect
 AnimationPlayer
 HSplitContainer
@@ -7,9 +12,3 @@ GridContainer
 CanvasLayer
 Container
 Control
-GPUParticles3D
-Label
-RichTextLabel
-Label3D
-MeshInstance3D
-CollisionShape3D

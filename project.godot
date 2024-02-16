@@ -59,6 +59,7 @@ Death={
 [layer_names]
 
 3d_render/layer_11="Layer 11"
+3d_physics/layer_5="Dying Layer"
 
 [rendering]
 
