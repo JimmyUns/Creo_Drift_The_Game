@@ -9,7 +9,7 @@ public partial class MainMenuFunctions : CanvasLayer
 	[Export] private AnimationPlayer mainmenuCamAnim;
 	[Export] private Node3D mainmenu_Map, game_Map;
 	[Export] private AudioStreamPlayer gameMusic;
-	[Export] private GpuParticles3D[] dustParticles;
+	[Export] private TextureRect brokenGlassTextureRect;
 
 
 	[Export] private Camera_Controller camController;
@@ -24,11 +24,6 @@ public partial class MainMenuFunctions : CanvasLayer
 
 		mainmenuCamAnim.Play("Main Menu Loop");
 
-		foreach (GpuParticles3D dustParticle in dustParticles)
-		{
-			dustParticle.Emitting = false;
-		}
-
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,6 +37,8 @@ public partial class MainMenuFunctions : CanvasLayer
 			
 			mainCamera.Position = Vector3.Zero;
 			mainCamera.RotationDegrees = Vector3.Zero;
+			
+			brokenGlassTextureRect.Visible = false;
 		}
 	}
 
@@ -54,8 +51,6 @@ public partial class MainMenuFunctions : CanvasLayer
 
 	public void StartingCutsceneAnimation()
 	{
-		dustParticles[2].Emitting = true;
-		dustParticles[3].Emitting = true;
 		mainmenu_Map.Visible = false;
 		game_Map.Visible = true;
 		mainCamera.GetNode<Camera3D>(mainCamera.GetPath()).Fov = 55f;
@@ -66,15 +61,12 @@ public partial class MainMenuFunctions : CanvasLayer
 
 	public void StartGameplay()
 	{
-		mainmenuCamAnim.Stop();
+		//mainmenuCamAnim.Stop();
 		camHolder.GlobalRotationDegrees = Vector3.Zero;
 		mainCamera.Fov = 90f;
 
 		camController.isActive = true;
 		vehicleBodyController.isActive = true;
 		vehicleBodyController.inputEnabled = true;
-
-		dustParticles[0].Emitting = true;
-		dustParticles[1].Emitting = true;
 	}
 }

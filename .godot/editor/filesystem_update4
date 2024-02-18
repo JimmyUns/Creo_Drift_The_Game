@@ -7,14 +7,12 @@ res://Assets/Models/Particle Mesh/Materials/SpeedParticle_Mat.tres
 res://Assets/Models/BillBoard/Materials/SteelBlack.tres
 res://Assets/Models/BillBoard/Materials/Sign.tres
 res://Assets/Models/BillBoard/Materials/WhiteLight.tres
-res://Scenes/player.tscn
+res://Assets/Sprites/Black_Mat.tres
+res://Scenes/road_closed_sign.tscn
+res://Scenes/cone.tscn
 res://Scripts/Camera_Controller.cs
 res://Scripts/Events_Controller.cs
 res://Scripts/GUI/MainMenuFunctions.cs
 res://Scripts/Particles_Controller.cs
 res://Scripts/vehiclebody_Controller.cs
 res://Scripts/World_Manager.cs
-res://Scenes/road_closed_sign.tscn
-res://Assets/Sprites/Dark/Texture.tres
-res://Assets/Sprites/Black_Mat.tres
-res://Scenes/cone.tscn

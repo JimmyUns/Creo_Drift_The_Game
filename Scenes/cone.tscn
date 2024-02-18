@@ -22,7 +22,7 @@ size = Vector3(1, 4.40576, 1)
 [node name="Cone" type="Node3D"]
 
 [node name="Model" parent="." instance=ExtResource("1_kdpil")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0271625, 0)
 
 [node name="Cone" parent="Model" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00798273, 0.0185728, 0.00480604)

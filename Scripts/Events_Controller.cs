@@ -11,7 +11,7 @@ public partial class Events_Controller : Node3D
 	[Export] private vehiclebody_Controller vhController;
 	[Export] private Camera_Controller camController;
 	[Export] private AnimationPlayer eventAnim;
-	[Export] private AnimationPlayer uiAnim;
+	[Export] public AnimationPlayer uiAnim;
 	[Export] private AudioStreamPlayer gameMusic;
 	
 	public override void _Ready()
