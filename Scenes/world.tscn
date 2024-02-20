@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://fsjqp0uj201q"]
+[gd_scene load_steps=60 format=3 uid="uid://fsjqp0uj201q"]
 
 [ext_resource type="Script" path="res://Scripts/World_Manager.cs" id="1_1hiu4"]
 [ext_resource type="AudioStream" uid="uid://dq1qdq4stpgsj" path="res://Assets/Audio/Creo - Drift.mp3" id="3_1if58"]
@@ -251,12 +251,50 @@ tracks/2/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_e06s3"]
+resource_name = "Selfies_Animation_1"
+length = 3.5366
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera Holder/Offset/Main Camera")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -7.5, 8, -5.355, 0.532, 1, -7.5, 8, -5.355, 0.533, 1, -11.985, -1.495, -11.43, 1.063, 1, -11.985, -1.495, -11.43, 1.064, 1, -6.155, 2.65, -18.115, 1.595, 1, -6.155, 2.65, -18.115, 1.596, 1, -7.5, 8, -5.355, 2.127, 1, -7.5, 8, -5.355, 2.128, 1, -11.985, -1.495, -11.43, 2.484, 1, -11.985, -1.495, -11.43, 2.485, 1, -6.155, 2.65, -18.115, 2.839, 1, -6.155, 2.65, -18.115, 3.194, 1, -0.32, -2.165, -10.99, 3.195, 1, 0, 0, 0)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera Holder/Offset/Main Camera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.532, 0.533, 1.063, 1.064, 1.595, 1.596, 2.127, 2.128, 2.484, 2.485, 2.839, 3.194, 3.195),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.959931, -0.785398, 0), Vector3(-0.959931, -0.785398, 0), Vector3(0.235619, -1.5708, 0), Vector3(0.235619, -1.5708, 0), Vector3(-0.523599, -2.75587, 0), Vector3(-0.523599, -2.75587, 0), Vector3(-0.959931, -0.785398, 0), Vector3(-0.959931, -0.785398, 0), Vector3(0.235619, -1.5708, 0), Vector3(0.235619, -1.5708, 0), Vector3(-0.523599, -2.75587, 0), Vector3(-0.523599, -2.75587, 0), Vector3(-0.523599, -2.75587, -8.72665), Vector3(0, 0, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Main Menu Nodes/Control/CanvasLayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.5366),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"StartGameplay"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gymku"]
 _data = {
 "Billboard_Event": SubResource("Animation_egfqi"),
 "Billboard_Event_2": SubResource("Animation_tdq1v"),
 "Player_Death": SubResource("Animation_4jt72"),
-"Reset_Everything": SubResource("Animation_tswp8")
+"Reset_Everything": SubResource("Animation_tswp8"),
+"Selfies_Animation_1": SubResource("Animation_e06s3")
 }
 
 [sub_resource type="Animation" id="Animation_mlpa0"]
@@ -667,16 +705,15 @@ expand_mode = 3
 stream = ExtResource("3_1if58")
 
 [node name="Camera Holder" type="Node3D" parent="World Miscs"]
-transform = Transform3D(0.501677, 0, -0.865055, 0, 1, 0, 0.865055, 0, 0.501677, -24.934, 1.367, 21.069)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Offset" type="Node3D" parent="World Miscs/Camera Holder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, -1.49012e-08, 2.98023e-08, -7.45058e-09, 1, -1.49012e-08, 3.5, -5.96046e-08)
 
 [node name="Main Camera" type="Camera3D" parent="World Miscs/Camera Holder/Offset"]
-transform = Transform3D(1, 0, 0, 0, 1, -7.45058e-09, 0, 7.45058e-09, 1, 0, 0, 0)
 fov = 60.0
 
-[node name="Events Controller" type="Node3D" parent="World Miscs" node_paths=PackedStringArray("playerPos", "vhController", "camController", "eventAnim", "uiAnim", "gameMusic")]
+[node name="Events Controller" type="Node3D" parent="World Miscs" node_paths=PackedStringArray("playerPos", "vhController", "camController", "eventAnim", "uiAnim", "gameMusic", "mainCamera")]
 script = ExtResource("4_0yhfr")
 playerPos = NodePath("../../Player/Body")
 vhController = NodePath("../../Player/Vehicle Body Controller")
@@ -684,6 +721,7 @@ camController = NodePath("../../Player/Camera Controller")
 eventAnim = NodePath("../Events Animations")
 uiAnim = NodePath("../Game UI Control/UI Animations")
 gameMusic = NodePath("../Game Music")
+mainCamera = NodePath("../Camera Holder/Offset/Main Camera")
 
 [node name="Events Animations" type="AnimationPlayer" parent="World Miscs"]
 libraries = {
@@ -706,7 +744,6 @@ libraries = {
 [node name="CanvasLayer" type="CanvasLayer" parent="World Miscs/Game UI Control"]
 
 [node name="A_Texture" type="TextureRect" parent="World Miscs/Game UI Control/CanvasLayer"]
-visible = false
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 4
 anchor_top = 0.5
@@ -721,7 +758,7 @@ expand_mode = 1
 
 [node name="A_Pressed_Texture" type="TextureRect" parent="World Miscs/Game UI Control/CanvasLayer"]
 visible = false
-modulate = Color(1, 1, 1, 0)
+modulate = Color(1, 1, 1, 0.313726)
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -734,7 +771,6 @@ texture = ExtResource("6_6a1dy")
 expand_mode = 1
 
 [node name="D_Texture" type="TextureRect" parent="World Miscs/Game UI Control/CanvasLayer"]
-visible = false
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 6
 anchor_left = 1.0
@@ -869,7 +905,7 @@ script = ExtResource("5_36x4j")
 desertDustParticles = [NodePath("../Body/Car_Model/Desert Particles/Left Particle"), NodePath("../Body/Car_Model/Desert Particles/Right Particle")]
 
 [node name="Body" type="RigidBody3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.738, -116.436)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.73795, 33.5134)
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
@@ -1027,7 +1063,7 @@ transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 0.0745727, 0, 6.7
 transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -0.0568829, 0, 6.75342)
 
 [node name="Road Closed Sign4" parent="Map/Game Map/Game_Map_1/Road Part 1/Road Closed" instance=ExtResource("24_jmq5w")]
-transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -0.061358, 0, 6.442)
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -0.0483103, 0, 6.442)
 
 [node name="Road Closed Sign7" parent="Map/Game Map/Game_Map_1/Road Part 1/Road Closed" instance=ExtResource("24_jmq5w")]
 transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 0.00470364, 0, 6.442)
@@ -1042,7 +1078,7 @@ transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, -0.00651055, 0, 5
 transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 0.0655079, 0, 5.82)
 
 [node name="Road Closed Sign10" parent="Map/Game Map/Game_Map_1/Road Part 1/Road Closed" instance=ExtResource("24_jmq5w")]
-transform = Transform3D(0.00899998, 0, 0, 0, 0.00899998, 0, 0, 0, 0.00899998, 0.0502844, 0, 4.67948)
+transform = Transform3D(0.00899998, 0, 0, 0, 0.00899998, 0, 0, 0, 0.00899998, 0.0732224, 0, 4.74145)
 
 [node name="Road Closed Sign11" parent="Map/Game Map/Game_Map_1/Road Part 1/Road Closed" instance=ExtResource("24_jmq5w")]
 transform = Transform3D(0.00899998, 0, 0, 0, 0.00899998, 0, 0, 0, 0.00899998, 0.0502844, 0, 4.45859)
@@ -1060,7 +1096,7 @@ transform = Transform3D(0.0090909, 0, 0, 0, 0.0090909, 0, 0, 0, 0.0090909, 0.069
 transform = Transform3D(0.00909091, 0, 0, 0, 0.00909091, 0, 0, 0, 0.00909091, 0.092609, 0.000110548, 7.21801)
 
 [node name="Cone3" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(0.00705846, 0, 0.0057291, 0, 0.0090909, 0, -0.0057291, 0, 0.00705846, -0.0826802, 0.000110548, 6.89313)
+transform = Transform3D(0.00705846, 0, 0.0057291, 0, 0.0090909, 0, -0.0057291, 0, 0.00705846, -0.0894558, 0.000110548, 6.89313)
 
 [node name="Cone4" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
 transform = Transform3D(0.00625638, 0, -0.00659561, 0, 0.00909089, 0, 0.00659561, 0, 0.00625638, -0.0710169, 0.000110548, 6.86993)
@@ -1096,19 +1132,19 @@ transform = Transform3D(0.00900505, 0, 0.00124603, 0, 0.00909085, 0, -0.00124603
 transform = Transform3D(0.00900505, 0, 0.00124603, 0, 0.00909085, 0, -0.00124603, 0, 0.00900505, 0.10507, 0.000110548, 6.1345)
 
 [node name="Cone15" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(0.000583011, 0, 0.00907213, 0, 0.00909084, 0, -0.00907213, 0, 0.000583011, -0.101806, 0.000110548, 6.15174)
+transform = Transform3D(0.000583011, 0, 0.00907213, 0, 0.00909084, 0, -0.00907213, 0, 0.000583011, -0.0890079, 0.000110548, 6.24398)
 
 [node name="Cone16" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(0.000583011, 0, 0.00907213, 0, 0.00909084, 0, -0.00907213, 0, 0.000583011, -0.101806, 0.000110548, 6.11651)
+transform = Transform3D(0.000583011, 0, 0.00907213, 0, 0.00909084, 0, -0.00907213, 0, 0.000583011, -0.0890079, 0.000110548, 6.20875)
 
 [node name="Cone17" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(0.000583011, 0, 0.00907212, 0, 0.00909084, 0, -0.00907212, 0, 0.000583011, -0.101806, 0.000110548, 6.08698)
+transform = Transform3D(0.000583011, 0, 0.00907212, 0, 0.00909084, 0, -0.00907212, 0, 0.000583011, -0.0890079, 0.000110548, 6.17922)
 
 [node name="Cone18" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(0.000583011, 0, 0.00907212, 0, 0.00909084, 0, -0.00907212, 0, 0.000583011, -0.101806, 0.000110548, 6.05394)
+transform = Transform3D(0.000583011, 0, 0.00907212, 0, 0.00909084, 0, -0.00907212, 0, 0.000583011, -0.0890079, 0.000110548, 6.14618)
 
 [node name="Cone19" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(0.000583011, 0, 0.00907212, 0, 0.00909083, 0, -0.00907212, 0, 0.000583011, -0.101806, 0.000110548, 6.0219)
+transform = Transform3D(0.000583011, 0, 0.00907212, 0, 0.00909083, 0, -0.00907212, 0, 0.000583011, -0.0890079, 0.000110548, 6.11413)
 
 [node name="Cone20" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
 transform = Transform3D(0.000583011, 0, 0.00907211, 0, 0.00909083, 0, -0.00907211, 0, 0.000583011, -0.101806, 0.000110548, 5.95431)
@@ -1243,64 +1279,52 @@ transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.0083579
 transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, -0.00406026, 0.000109091, 4.47085)
 
 [node name="Cone64" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, -0.00406364, 0.000109091, 4.27419)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.00300068, 0.000109091, 4.27419)
 
 [node name="Cone83" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.00814597, 0.000109091, 4.2535)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0152103, 0.000109091, 4.2535)
 
 [node name="Cone84" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0169767, 0.000109091, 4.22717)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.024041, 0.000109091, 4.22717)
 
 [node name="Cone85" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.029163, 0.000109091, 4.20358)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0362273, 0.000109091, 4.20358)
 
 [node name="Cone86" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.048216, 0.000109091, 4.18458)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0552803, 0.000109091, 4.18458)
 
 [node name="Cone87" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0606786, 0.000109091, 4.16145)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0677429, 0.000109091, 4.16145)
 
 [node name="Cone88" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.069581, 0.000109091, 4.13852)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0766453, 0.000109091, 4.13852)
 
 [node name="Cone89" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0760529, 0.000109091, 4.11934)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0831172, 0.000109091, 4.11934)
 
 [node name="Cone91" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0760529, 0.000109091, 4.10183)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0831172, 0.000109091, 4.10183)
 
 [node name="Cone92" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0760529, 0.000109091, 4.08444)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0831172, 0.000109091, 4.08444)
 
 [node name="Cone93" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0760529, 0.000109091, 4.06198)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0831172, 0.000109091, 4.06198)
 
 [node name="Cone94" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0760529, 0.000109091, 4.03399)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0831172, 0.000109091, 4.03399)
 
 [node name="Cone95" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0760529, 0.000109091, 4.00984)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0831172, 0.000109091, 4.00984)
 
 [node name="Cone96" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0760529, 0.000109091, 3.98125)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0831172, 0.000109091, 3.98125)
 
 [node name="Cone97" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0615683, 0.000109091, 3.95343)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0686326, 0.000109091, 3.95343)
 
 [node name="Cone98" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0465544, 0.000109091, 3.9301)
-
-[node name="Cone99" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0400125, 0.000109091, 3.90081)
-
-[node name="Cone100" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0363764, 0.000109091, 3.87858)
-
-[node name="Cone101" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0363764, 0.000109091, 3.85894)
-
-[node name="Cone102" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0363764, 0.000109091, 3.83776)
+transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, 0.0536187, 0.000109091, 3.9301)
 
 [node name="Cone65" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
 transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, -0.0875975, 0.000109091, 4.27419)
@@ -1346,18 +1370,6 @@ transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.0083579
 
 [node name="Cone79" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
 transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, -0.0098826, 0.000109091, 3.93729)
-
-[node name="Cone80" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, -0.0226793, 0.000109091, 3.90913)
-
-[node name="Cone81" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, -0.0246618, 0.000109091, 3.87759)
-
-[node name="Cone82" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, -0.0275704, 0.000109091, 3.84892)
-
-[node name="Cone90" parent="Map/Game Map/Game_Map_1/Road Part 1/Road_Cones" instance=ExtResource("25_j2woa")]
-transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.00835792, 0, -0.00357599, -0.027813, 0.000109091, 3.82796)
 
 [node name="Game_Map_2" parent="Map/Game Map" instance=ExtResource("13_mf6gq")]
 transform = Transform3D(110, 0, 0, 0, 110, 0, 0, 0, 110, 0, -5.104, -1589.9)

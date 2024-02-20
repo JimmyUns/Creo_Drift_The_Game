@@ -33,6 +33,16 @@ public partial class MainMenuFunctions : CanvasLayer
 		{
 			GetNode<CanvasLayer>(this.GetPath()).Visible = false;
 
+			eventsController.CheckPointSpawn();
+			
+			mainCamera.Position = Vector3.Zero;
+			mainCamera.RotationDegrees = Vector3.Zero;
+			
+			brokenGlassTextureRect.Visible = false;
+		} else if (Input.IsActionJustPressed("Skip2"))
+		{
+			GetNode<CanvasLayer>(this.GetPath()).Visible = false;
+
 			StartingCutsceneAnimation();
 			
 			mainCamera.Position = Vector3.Zero;

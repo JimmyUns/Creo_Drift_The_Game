@@ -6,6 +6,7 @@ public partial class Events_Controller : Node3D
 {
 	public float currentTime;
 	private int eventsIndex;
+	private int lastEventsIndex;
 
 	[Export] private Node3D playerPos; //For Debugging
 	[Export] private vehiclebody_Controller vhController;
@@ -13,17 +14,18 @@ public partial class Events_Controller : Node3D
 	[Export] private AnimationPlayer eventAnim;
 	[Export] public AnimationPlayer uiAnim;
 	[Export] private AudioStreamPlayer gameMusic;
-	
+	[Export] private Camera3D mainCamera;
+
 	public override void _Ready()
 	{
 	}
 	public override void _Process(double delta)
 	{
-		if(Input.IsActionJustPressed("Death"))
+		if (Input.IsActionJustPressed("Death"))
 		{
 			StopGame();
 		}
-		
+
 		if (eventsIndex == 0) return;
 		currentTime += (float)delta;
 		TimeEvents();
@@ -53,20 +55,34 @@ public partial class Events_Controller : Node3D
 				}
 				break;
 
-			case 3:
-				if (currentTime > 24.599)
-				{
-					Debug.Print(playerPos.GlobalPosition.Z.ToString());
-					eventsIndex++;
-					
-				}
-				break;
-			case 4:
+			case 3: //Play the Selfies animation 1 (The animation that shows the car from different angles)
 				if (currentTime > 25.576)
 				{
-					Debug.Print(playerPos.GlobalPosition.Z.ToString());
+					vhController.inputEnabled = false;
+					eventAnim.Play("Selfies_Animation_1");
+					mainCamera.Fov = 55f;
+
+
 					eventsIndex++;
 				}
+				break;
+		}
+	}
+
+	public void CheckPointSpawn()
+	{
+		switch (lastEventsIndex)
+		{
+			case 2: //Billboard Animation
+				playerPos.GlobalPosition = new Vector3(0f, -5.7153025f, -473f);
+				playerPos.Visible = true;
+				currentTime = 12.1f;
+				eventsIndex = 3;
+
+				vhController.isActive = true;
+				vhController.inputEnabled = false;
+				camController.isActive = false;
+				eventAnim.Play("Billboard_Event");
 				break;
 		}
 	}
@@ -81,14 +97,15 @@ public partial class Events_Controller : Node3D
 		eventAnim.Play("Billboard_Event_2");
 
 	}
-	
+
 	private void _on_area_checker_body_entered(Node3D body)
 	{
 		StopGame();
 	}
-	
+
 	public void StopGame()
 	{
+		lastEventsIndex = 2;
 		eventsIndex = 0;
 		currentTime = 0f;
 		vhController.isActive = false;
