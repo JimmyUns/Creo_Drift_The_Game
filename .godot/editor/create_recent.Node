@@ -1,7 +1,8 @@
+Node
+Node3D
 CSGBox3D
 TextureRect
 CanvasLayer
-Node3D
 CollisionShape3D
 StaticBody3D
 Area3D
@@ -12,4 +13,3 @@ AnimationPlayer
 HSplitContainer
 GridContainer
 Container
-Control

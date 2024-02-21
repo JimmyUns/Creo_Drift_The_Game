@@ -1,13 +1,15 @@
-[gd_scene load_steps=60 format=3 uid="uid://fsjqp0uj201q"]
+[gd_scene load_steps=61 format=3 uid="uid://fsjqp0uj201q"]
 
 [ext_resource type="Script" path="res://Scripts/World_Manager.cs" id="1_1hiu4"]
-[ext_resource type="AudioStream" uid="uid://dq1qdq4stpgsj" path="res://Assets/Audio/Creo - Drift.mp3" id="3_1if58"]
+[ext_resource type="AudioStream" uid="uid://dq1qdq4stpgsj" path="res://Assets/Audio/Music/Creo - Drift - Full.mp3" id="3_1if58"]
 [ext_resource type="Script" path="res://Scripts/vehiclebody_Controller.cs" id="3_7ijs1"]
 [ext_resource type="Script" path="res://Scripts/Events_Controller.cs" id="4_0yhfr"]
 [ext_resource type="Script" path="res://Scripts/Camera_Controller.cs" id="4_8c4pu"]
 [ext_resource type="Script" path="res://Scripts/GUI/MainMenuFunctions.cs" id="4_8nri5"]
+[ext_resource type="AudioStream" uid="uid://csmvp18s2va8p" path="res://Assets/Audio/Music/Creo - Drift - BillBoard.mp3" id="4_qedd7"]
 [ext_resource type="Texture2D" uid="uid://b2m6514gaty5a" path="res://Assets/Sprites/Text_Sprite/A_Button_Normal.png" id="5_7wmo7"]
 [ext_resource type="Script" path="res://Scripts/Particles_Controller.cs" id="5_36x4j"]
+[ext_resource type="Animation" uid="uid://8g3xa3jjfefb" path="res://Game Starting Cutscene Animation.res" id="5_acsql"]
 [ext_resource type="Texture2D" uid="uid://6ibmmohwyvua" path="res://Assets/Sprites/Text_Sprite/A_Button_Pressed.png" id="6_6a1dy"]
 [ext_resource type="Texture2D" uid="uid://cns5i1b56dqpn" path="res://Assets/Sprites/Vignette.png" id="6_6w7s8"]
 [ext_resource type="PackedScene" uid="uid://t76p4slu5uwp" path="res://Assets/Models/Car/Car_Model.blend" id="6_fad3d"]
@@ -118,31 +120,31 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0.287979, -0.837758, 0), Vector3(0.1309, -0.837758, 0.174533), Vector3(0.1309, -0.837758, 0.0872665), Vector3(0.1309, -0.837758, 0.174533), Vector3(0.1309, -0.837758, 0.139626), Vector3(0.1309, -0.837758, 0.139626), Vector3(0.1309, -0.694641, -0.872665), Vector3(0.1309, -0.694641, -0.584685), Vector3(0.1309, -0.694641, -0.383972), Vector3(0.1309, -0.694641, -0.506472), Vector3(0.1309, -0.694641, -0.427606), Vector3(0.1309, -0.694641, -0.506145), Vector3(0.1309, -0.694641, -0.506145), Vector3(0.1309, -0.877901, 0.0349066), Vector3(0.1309, -0.694641, 0.541052), Vector3(0.1309, -0.790634, 0.139626), Vector3(0.1309, -0.790634, 0.296706), Vector3(0.1309, -0.790634, 0.20944), Vector3(0.1309, -0.790634, 0.20944), Vector3(0.1309, -0.755728, -0.986111), Vector3(0.1309, -0.755728, -1.12574), Vector3(0.1309, -0.741765, -0.911062), Vector3(0.1309, -0.74002, -1.13446), Vector3(0.1309, -0.727802, -1.01055), Vector3(0.1309, -0.685914, -0.715585), Vector3(0.1309, -0.727802, -1.01055), Vector3(0.1309, -0.685914, -0.715585), Vector3(0.1309, -0.703292, -0.837951), Vector3(0.1309, -0.685914, -0.715585), Vector3(0.1309, -0.685914, -0.715585)]
 }
-tracks/2/type = "method"
+tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Main Menu Nodes/Control/CanvasLayer")
+tracks/2/path = NodePath("../Player/Body/Speed Trail Particle:emitting")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
+"times": PackedFloat32Array(2.78),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Events Controller")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(2.78),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"StartGameplay"
 }]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Player/Body/Speed Trail Particle:emitting")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(2.78),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_4jt72"]
@@ -276,7 +278,7 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Main Menu Nodes/Control/CanvasLayer")
+tracks/2/path = NodePath("Events Controller")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -292,6 +294,7 @@ tracks/2/keys = {
 _data = {
 "Billboard_Event": SubResource("Animation_egfqi"),
 "Billboard_Event_2": SubResource("Animation_tdq1v"),
+"Game Starting Cutscene Animation": ExtResource("5_acsql"),
 "Player_Death": SubResource("Animation_4jt72"),
 "Reset_Everything": SubResource("Animation_tswp8"),
 "Selfies_Animation_1": SubResource("Animation_e06s3")
@@ -390,86 +393,6 @@ _data = {
 "AD_Animation": SubResource("Animation_mlpa0")
 }
 
-[sub_resource type="Animation" id="Animation_y40tn"]
-resource_name = "Game Starting Cutscene Animation"
-length = 5.6
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control/CanvasLayer")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(5.6),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"StartGameplay"
-}]
-}
-tracks/1/type = "position_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../World Miscs/Camera Holder")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, -10, 16.5, 0, 1.6, 1, -128.854, 16.5, 0, 5.6, 1, -128.854, 5.5, 0)
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../World Miscs/Camera Holder:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.4, 1.8),
-"transitions": PackedFloat32Array(1, 1, 0.188203, 0.366021),
-"update": 0,
-"values": [Vector3(1.5708, -1.0472, 0), Vector3(1.39626, -1.0472, 0), Vector3(0.523599, -1.0472, 0), Vector3(0.349066, -1.0472, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Control/Drift Label:theme_override_colors/font_color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(1.6, 2.5, 4.5, 5.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1e+06),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.219608), Color(0, 0, 0, 0.219608), Color(0, 0, 0, 0)]
-}
-tracks/4/type = "position_3d"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../Player/Body")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0, -9.73795, 33.5134, 1.6, 1, 0, -9.738, 2.593, 5.6, 1, 0, -9.738, -116.436)
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../Player/Body:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../Player/Body/Speed Trail Particle:emitting")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 5.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-
 [sub_resource type="Animation" id="Animation_or3b6"]
 tracks/0/type = "position_3d"
 tracks/0/imported = false
@@ -509,7 +432,7 @@ length = 6.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/CanvasLayer")
+tracks/0/path = NodePath("Control/Main Menu Canvas")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -542,7 +465,6 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yc245"]
 _data = {
-"Game Starting Cutscene Animation": SubResource("Animation_y40tn"),
 "Main Menu Loop": SubResource("Animation_or3b6"),
 "Main Menu To Game Animation": SubResource("Animation_61m0s")
 }
@@ -701,11 +623,16 @@ size_flags_vertical = 6
 texture = ExtResource("6_6w7s8")
 expand_mode = 3
 
-[node name="Game Music" type="AudioStreamPlayer" parent="World Miscs"]
+[node name="Game Music Holder" type="Node" parent="World Miscs"]
+
+[node name="0" type="AudioStreamPlayer" parent="World Miscs/Game Music Holder"]
 stream = ExtResource("3_1if58")
 
+[node name="1" type="AudioStreamPlayer" parent="World Miscs/Game Music Holder"]
+stream = ExtResource("4_qedd7")
+
 [node name="Camera Holder" type="Node3D" parent="World Miscs"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(0.499998, -0.866027, 3.13501e-06, 0, -3.61999e-06, -1, 0.866027, 0.499998, -1.80999e-06, -10, 16.5, 0)
 
 [node name="Offset" type="Node3D" parent="World Miscs/Camera Holder"]
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, -1.49012e-08, 2.98023e-08, -7.45058e-09, 1, -1.49012e-08, 3.5, -5.96046e-08)
@@ -713,15 +640,17 @@ transform = Transform3D(1, 0, -2.98023e-08, 0, 1, -1.49012e-08, 2.98023e-08, -7.
 [node name="Main Camera" type="Camera3D" parent="World Miscs/Camera Holder/Offset"]
 fov = 60.0
 
-[node name="Events Controller" type="Node3D" parent="World Miscs" node_paths=PackedStringArray("playerPos", "vhController", "camController", "eventAnim", "uiAnim", "gameMusic", "mainCamera")]
+[node name="Events Controller" type="Node3D" parent="World Miscs" node_paths=PackedStringArray("playerBody", "vhController", "camController", "eventAnim", "uiAnim", "mainCamera", "camHolder", "gameMusic", "brokenGlassTextureRect")]
 script = ExtResource("4_0yhfr")
-playerPos = NodePath("../../Player/Body")
+playerBody = NodePath("../../Player/Body")
 vhController = NodePath("../../Player/Vehicle Body Controller")
 camController = NodePath("../../Player/Camera Controller")
 eventAnim = NodePath("../Events Animations")
 uiAnim = NodePath("../Game UI Control/UI Animations")
-gameMusic = NodePath("../Game Music")
 mainCamera = NodePath("../Camera Holder/Offset/Main Camera")
+camHolder = NodePath("../Camera Holder")
+gameMusic = [NodePath("../Game Music Holder/0"), NodePath("../Game Music Holder/1")]
+brokenGlassTextureRect = NodePath("../Game UI Control/Broken_Glass_Texture")
 
 [node name="Events Animations" type="AnimationPlayer" parent="World Miscs"]
 libraries = {
@@ -823,7 +752,7 @@ volume_db = -13.0
 
 [node name="Main Menu Nodes" type="Node3D" parent="."]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Main Menu Nodes"]
+[node name="Main Menu Animations" type="AnimationPlayer" parent="Main Menu Nodes"]
 libraries = {
 "": SubResource("AnimationLibrary_yc245")
 }
@@ -836,34 +765,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Main Menu Nodes/Control" node_paths=PackedStringArray("mainCamera", "camHolder", "mainmenuCamAnim", "mainmenu_Map", "game_Map", "gameMusic", "brokenGlassTextureRect", "camController", "vehicleBodyController", "eventsController")]
+[node name="Main Menu Canvas" type="CanvasLayer" parent="Main Menu Nodes/Control" node_paths=PackedStringArray("mainmenuCamAnim", "mainmenu_Map", "game_Map", "eventsController")]
 script = ExtResource("4_8nri5")
-mainCamera = NodePath("../../../World Miscs/Camera Holder/Offset/Main Camera")
-camHolder = NodePath("../../../World Miscs/Camera Holder")
-mainmenuCamAnim = NodePath("../../AnimationPlayer")
+mainmenuCamAnim = NodePath("../../Main Menu Animations")
 mainmenu_Map = NodePath("../../../Map/Main Menu Area")
 game_Map = NodePath("../../../Map/Game Map")
-gameMusic = NodePath("../../../World Miscs/Game Music")
-brokenGlassTextureRect = NodePath("../../../World Miscs/Game UI Control/Broken_Glass_Texture")
-camController = NodePath("../../../Player/Camera Controller")
-vehicleBodyController = NodePath("../../../Player/Vehicle Body Controller")
 eventsController = NodePath("../../../World Miscs/Events Controller")
 
-[node name="Button" type="Button" parent="Main Menu Nodes/Control/CanvasLayer"]
+[node name="Button" type="Button" parent="Main Menu Nodes/Control/Main Menu Canvas"]
 offset_left = 61.0
 offset_top = 173.0
 offset_right = 309.0
 offset_bottom = 285.0
 text = "Start"
 
-[node name="Button2" type="Button" parent="Main Menu Nodes/Control/CanvasLayer"]
+[node name="Button2" type="Button" parent="Main Menu Nodes/Control/Main Menu Canvas"]
 offset_left = 68.0
 offset_top = 332.0
 offset_right = 316.0
 offset_bottom = 444.0
 text = "Options"
 
-[node name="Button3" type="Button" parent="Main Menu Nodes/Control/CanvasLayer"]
+[node name="Button3" type="Button" parent="Main Menu Nodes/Control/Main Menu Canvas"]
 offset_left = 83.0
 offset_top = 489.0
 offset_right = 331.0
@@ -917,6 +840,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03846, -15.6215)
 layers = 1024
 material_override = ExtResource("12_h4b8a")
 cast_shadow = 0
+emitting = false
 amount = 30
 process_material = SubResource("ParticleProcessMaterial_cdydm")
 draw_pass_1 = ExtResource("13_o4iaw")
@@ -1374,7 +1298,7 @@ transform = Transform3D(-0.00357599, 0, 0.00835792, 0, 0.00909079, 0, -0.0083579
 [node name="Game_Map_2" parent="Map/Game Map" instance=ExtResource("13_mf6gq")]
 transform = Transform3D(110, 0, 0, 0, 110, 0, 0, 0, 110, 0, -5.104, -1589.9)
 
-[connection signal="button_down" from="Main Menu Nodes/Control/CanvasLayer/Button" to="Main Menu Nodes/Control/CanvasLayer" method="_on_button_button_down"]
+[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Button" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_button_button_down"]
 [connection signal="body_entered" from="Player/Body/Area Checker" to="World Miscs/Events Controller" method="_on_area_checker_body_entered"]
 
 [editable path="Player/Body/Car_Model"]
