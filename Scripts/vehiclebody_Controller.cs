@@ -15,11 +15,17 @@ public partial class vehiclebody_Controller : Node
 	[Export] public RigidBody3D vBody;
 	[Export] public Node3D vBody_Model;
 	[Export] public Particles_Controller particlesController;
+	[Export] public AnimationPlayer carAnim;
 
 	private float currentSteeringSpeed;
 	private float _delta;
 	private Vector3 velocity;
 	private float gravity = 20f, currentGravity = 0f;
+	
+	public override void _Ready()
+	{
+		carAnim.Play("Rotate_Wheels");
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{

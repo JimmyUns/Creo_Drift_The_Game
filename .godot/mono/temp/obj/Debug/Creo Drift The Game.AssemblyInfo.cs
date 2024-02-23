@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Creo Drift The Game")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62066fd08c33f82f98e79f1952abdca8bf39ff98")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34bc8cfac281e931edef21ef5a2b388de7dc5e28")]
 [assembly: System.Reflection.AssemblyProductAttribute("Creo Drift The Game")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Creo Drift The Game")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

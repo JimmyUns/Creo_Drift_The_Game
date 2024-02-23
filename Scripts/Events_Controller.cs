@@ -89,6 +89,15 @@ public partial class Events_Controller : Node3D
 					eventsIndex++;
 				}
 				break;
+			case 4:
+				if (currentTime > 34.096f)
+				{
+					//eventAnim.Plat();
+					eventsIndex++;
+				}
+				
+				break;
+				
 		}
 	}
 
@@ -98,6 +107,8 @@ public partial class Events_Controller : Node3D
 		{
 			case 2: //Billboard Animation
 				playerBody.GlobalPosition = new Vector3(0f, -5.7153025f, -473f);
+				//playerBody.GlobalPosition = new Vector3(0f, -5.7153025f, -900f);
+				
 				playerBody.Visible = true;
 				currentTime = 12.1f;
 				eventsIndex = 3;

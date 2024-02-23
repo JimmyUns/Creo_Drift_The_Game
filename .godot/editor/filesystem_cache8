@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708521513
+::res://::1708634881
 export_presets.cfg::TextFile::-1::1708468165::0::1::::<><>::
 Game Starting Cutscene Animation.res::Animation::2330359299312371731::1708520734::0::1::::<><>::
 icon.svg::CompressedTexture2D::5954864764735018240::1698515979::1698515997::1::::<><>::
@@ -9,42 +9,43 @@ test.png::CompressedTexture2D::6489454618338117231::1706902783::1706902788::1:::
 ::res://Assets/Audio/::1708521469
 Car_Crash.mp3::AudioStreamMP3::1061100635064756793::1707955459::1707955474::1::::<><>::
 Glass_breaking.mp3::AudioStreamMP3::4044253419920520719::1707954934::1707954935::1::::<><>::
-::res://Assets/Audio/Music/::1708521544
+::res://Assets/Audio/Music/::1708521551
 Creo - Drift - BillBoard.mp3::AudioStreamMP3::6062316347116566217::1708521547::1708521551::1::::<><>::
 Creo - Drift - Full.mp3::AudioStreamMP3::8336935086176109101::1706920402::1708521514::1::::<><>::
 ::res://Assets/Models/::1707956072
 ::res://Assets/Models/BillBoard/::1707956072
 BillBoard.blend::PackedScene::7807429435801163312::1707743096::1707752817::1::::<><>::uid://bwquoljgrg5o5::::res://Assets/Models/BillBoard/Materials/SteelBlack.tres<>uid://dqa5c0c6sm463::::res://Assets/Models/BillBoard/Materials/Sign.tres<>uid://nr3r1oawq5gx::::res://Assets/Models/BillBoard/Materials/WhiteLight.tres
-::res://Assets/Models/BillBoard/Materials/::1708521512
-Sign.tres::StandardMaterial3D::8284109948265045902::1708521512::0::1::::<><>::uid://mlctoijn7700::::res://Assets/Sprites/Sign.png
-SteelBlack.tres::StandardMaterial3D::3964845220720460338::1708521512::0::1::::<><>::
-WhiteLight.tres::StandardMaterial3D::949281210671710139::1708521512::0::1::::<><>::
-::res://Assets/Models/Car/::1708521512
+::res://Assets/Models/BillBoard/Materials/::1708634889
+Sign.tres::StandardMaterial3D::8284109948265045902::1708634889::0::1::::<><>::uid://mlctoijn7700::::res://Assets/Sprites/Sign.png
+SteelBlack.tres::StandardMaterial3D::3964845220720460338::1708634888::0::1::::<><>::
+WhiteLight.tres::StandardMaterial3D::949281210671710139::1708634889::0::1::::<><>::
+::res://Assets/Models/Car/::1708638983
 Car.glb::PackedScene::1379791152764436512::1698529271::1706873318::1::::<><>::
-Car_Body.tres::StandardMaterial3D::5648179133897520841::1708521512::0::1::::<><>::
-Car_Glass.tres::StandardMaterial3D::7734616741944384979::1708521512::0::1::::<><>::
+Car_Body.tres::StandardMaterial3D::5648179133897520841::1708634888::0::1::::<><>::
+Car_Glass.tres::StandardMaterial3D::7734616741944384979::1708634888::0::1::::<><>::
 Car_Model.blend::PackedScene::1401558682448215003::1706895767::1706895826::1::::<><>::
+Car_Model_2.blend::PackedScene::7064437035106828852::1708638983::1708638988::1::::<><>::
 Daylight Box UV.png::CompressedTexture2D::2051087231551860930::1706897456::1706897459::1::::<><>::
 ::res://Assets/Models/Dust/::1707956072
 Dust_1.blend::PackedScene::3679258328593697052::1706902670::1706902677::1::::<><>::
 Dust_1.obj::Mesh::2107424719983845753::1706902576::1706902577::1::::<><>::
 ::res://Assets/Models/Map/::1707956072
 Main_Menu_Map.blend::PackedScene::4006575871584778546::1707775527::1707775542::1::::<><>::uid://8sixts4gjcn6::::res://Assets/Models/Map/Materials/Desert.tres<>uid://cubv7oby4q2lr::::res://Assets/Models/Map/Materials/Road.tres
-::res://Assets/Models/Map/Game_Maps/::1708003834
-Game_Map_1.blend::PackedScene::1335096760569770545::1708003828::1708003834::1::::<><>::uid://8sixts4gjcn6::::res://Assets/Models/Map/Materials/Desert.tres<>uid://cubv7oby4q2lr::::res://Assets/Models/Map/Materials/Road.tres
-::res://Assets/Models/Map/Materials/::1708521512
-Desert.tres::StandardMaterial3D::2353918475906223017::1708521512::0::1::::<><>::
-Road.tres::StandardMaterial3D::6180015558155532803::1708521512::0::1::::<><>::uid://cwteajrvuy3gi::::res://Assets/Sprites/Road2.png
+::res://Assets/Models/Map/Game_Maps/::1708527242
+Game_Map_1.blend::PackedScene::1335096760569770545::1708527234::1708527242::1::::<><>::uid://8sixts4gjcn6::::res://Assets/Models/Map/Materials/Desert.tres<>uid://cubv7oby4q2lr::::res://Assets/Models/Map/Materials/Road.tres
+::res://Assets/Models/Map/Materials/::1708634888
+Desert.tres::StandardMaterial3D::2353918475906223017::1708634888::0::1::::<><>::
+Road.tres::StandardMaterial3D::6180015558155532803::1708634888::0::1::::<><>::uid://cwteajrvuy3gi::::res://Assets/Sprites/Road2.png
 ::res://Assets/Models/Particle Mesh/::1707956072
 SpeedParticle_Mesh.blend::PackedScene::3538171268507021900::1707858892::1707858992::1::::<><>::
 SpeedParticle_Mesh.obj::Mesh::137334573213597370::1707858150::1707858151::1::::<><>::
-::res://Assets/Models/Particle Mesh/Materials/::1708521512
-SpeedParticle_Mat.tres::StandardMaterial3D::9066285066261861094::1708521512::0::1::::<><>::
+::res://Assets/Models/Particle Mesh/Materials/::1708634888
+SpeedParticle_Mat.tres::StandardMaterial3D::9066285066261861094::1708634888::0::1::::<><>::
 ::res://Assets/Models/Props/::1708195262
 Cone.blend::PackedScene::8237368843451730668::1708177755::1708195262::1::::<><>::
 Road_Closed_Sign.blend::PackedScene::6488510781210315889::1708195083::1708195262::1::::<><>::
-::res://Assets/Sprites/::1708521512
-Black_Mat.tres::StandardMaterial3D::1902094854689754114::1708521512::0::1::::<><>::
+::res://Assets/Sprites/::1708634889
+Black_Mat.tres::StandardMaterial3D::1902094854689754114::1708634889::0::1::::<><>::
 Broken_Screen_Glass.png::CompressedTexture2D::289139923572313653::1707954737::1707954739::1::::<><>::
 Road1.1.png::CompressedTexture2D::1854005829653388627::1698581639::1706816613::1::::<><>::
 Road1.png::CompressedTexture2D::1036907638594685066::1698581366::1706816613::1::::<><>::
@@ -71,23 +72,23 @@ A_Button_Normal.png::CompressedTexture2D::4308229206241419892::1707945553::17079
 A_Button_Pressed.png::CompressedTexture2D::2192451973586986492::1707945692::1707945915::1::::<><>::
 D_Button_Normal.png::CompressedTexture2D::2172702023555228989::1707945808::1707945915::1::::<><>::
 D_Button_Pressed.png::CompressedTexture2D::2610660810856897225::1707986721::1707986803::1::::<><>::
-::res://Scenes/::1708521512
-cone.tscn::PackedScene::6005520694293176791::1708520805::0::1::::<><>::uid://dpmii5em1ed6c::::res://Assets/Models/Props/Cone.blend<>uid://2dnhvmeuxuq1::::res://Assets/Sprites/Black_Mat.tres
+::res://Scenes/::1708636965
+cone.tscn::PackedScene::6005520694293176791::1708635751::0::1::::<><>::uid://dpmii5em1ed6c::::res://Assets/Models/Props/Cone.blend<>uid://2dnhvmeuxuq1::::res://Assets/Sprites/Black_Mat.tres
 player.tscn::PackedScene::7534346944611994992::1708000455::0::1::::<><>::res://Scripts/vehiclebody_Controller.cs<>res://Scripts/Camera_Controller.cs<>uid://cypsmtct1h2nr::::res://test.png<>res://Scripts/Particles_Controller.cs<>uid://t76p4slu5uwp::::res://Assets/Models/Car/Car_Model.blend<>uid://5a38hxoml5dd::::res://Assets/Models/Dust/Dust_1.obj
-road_closed_sign.tscn::PackedScene::7807360479722042939::1708520805::0::1::::<><>::uid://cypc3bhojl4av::::res://Assets/Models/Props/Road_Closed_Sign.blend<>uid://2dnhvmeuxuq1::::res://Assets/Sprites/Black_Mat.tres
-world.tscn::PackedScene::388678870792803472::1708521512::0::1::::<><>::res://Scripts/World_Manager.cs<>uid://dq1qdq4stpgsj::::res://Assets/Audio/Music/Creo - Drift - Full.mp3<>res://Scripts/vehiclebody_Controller.cs<>res://Scripts/Events_Controller.cs<>res://Scripts/Camera_Controller.cs<>res://Scripts/GUI/MainMenuFunctions.cs<>uid://b2m6514gaty5a::::res://Assets/Sprites/Text_Sprite/A_Button_Normal.png<>res://Scripts/Particles_Controller.cs<>uid://8g3xa3jjfefb::::res://Game Starting Cutscene Animation.res<>uid://6ibmmohwyvua::::res://Assets/Sprites/Text_Sprite/A_Button_Pressed.png<>uid://cns5i1b56dqpn::::res://Assets/Sprites/Vignette.png<>uid://t76p4slu5uwp::::res://Assets/Models/Car/Car_Model.blend<>uid://57qc5eur3twv::::res://Assets/Sprites/Text_Sprite/D_Button_Normal.png<>uid://cypsmtct1h2nr::::res://test.png<>uid://bdgvg4wu6vde4::::res://Assets/Sprites/Text_Sprite/D_Button_Pressed.png<>uid://5a38hxoml5dd::::res://Assets/Models/Dust/Dust_1.obj<>uid://eecdexwj5ipx::::res://Assets/Sprites/Broken_Screen_Glass.png<>uid://bxvci68d6nded::::res://Assets/Audio/Glass_breaking.mp3<>uid://peaf4lhpkqer::::res://Assets/Audio/Car_Crash.mp3<>uid://bxc2ypo5hl7uc::::res://Assets/Models/Map/Main_Menu_Map.blend<>uid://d2f1njl4x83ty::::res://Assets/Models/Particle Mesh/Materials/SpeedParticle_Mat.tres<>uid://tay3373xyf4t::::res://Assets/Models/Map/Game_Maps/Game_Map_1.blend<>uid://b7r46xrn62be::::res://Assets/Models/Particle Mesh/SpeedParticle_Mesh.obj<>uid://djh8hs1rsvuo3::::res://Assets/Models/BillBoard/BillBoard.blend<>uid://djh7c66dmoich::::res://Scenes/road_closed_sign.tscn<>uid://crtebv788thk6::::res://Scenes/cone.tscn
+road_closed_sign.tscn::PackedScene::7807360479722042939::1708635750::0::1::::<><>::uid://cypc3bhojl4av::::res://Assets/Models/Props/Road_Closed_Sign.blend<>uid://2dnhvmeuxuq1::::res://Assets/Sprites/Black_Mat.tres
+world.tscn::PackedScene::388678870792803472::1708636965::0::1::::<><>::res://Scripts/World_Manager.cs<>uid://dq1qdq4stpgsj::::res://Assets/Audio/Music/Creo - Drift - Full.mp3<>res://Scripts/vehiclebody_Controller.cs<>res://Scripts/Events_Controller.cs<>res://Scripts/Camera_Controller.cs<>res://Scripts/GUI/MainMenuFunctions.cs<>uid://csmvp18s2va8p::::res://Assets/Audio/Music/Creo - Drift - BillBoard.mp3<>uid://b2m6514gaty5a::::res://Assets/Sprites/Text_Sprite/A_Button_Normal.png<>res://Scripts/Particles_Controller.cs<>uid://8g3xa3jjfefb::::res://Game Starting Cutscene Animation.res<>uid://6ibmmohwyvua::::res://Assets/Sprites/Text_Sprite/A_Button_Pressed.png<>uid://cns5i1b56dqpn::::res://Assets/Sprites/Vignette.png<>uid://t76p4slu5uwp::::res://Assets/Models/Car/Car_Model.blend<>uid://57qc5eur3twv::::res://Assets/Sprites/Text_Sprite/D_Button_Normal.png<>uid://cypsmtct1h2nr::::res://test.png<>uid://bdgvg4wu6vde4::::res://Assets/Sprites/Text_Sprite/D_Button_Pressed.png<>uid://5a38hxoml5dd::::res://Assets/Models/Dust/Dust_1.obj<>uid://eecdexwj5ipx::::res://Assets/Sprites/Broken_Screen_Glass.png<>uid://bxvci68d6nded::::res://Assets/Audio/Glass_breaking.mp3<>uid://peaf4lhpkqer::::res://Assets/Audio/Car_Crash.mp3<>uid://bxc2ypo5hl7uc::::res://Assets/Models/Map/Main_Menu_Map.blend<>uid://d2f1njl4x83ty::::res://Assets/Models/Particle Mesh/Materials/SpeedParticle_Mat.tres<>uid://tay3373xyf4t::::res://Assets/Models/Map/Game_Maps/Game_Map_1.blend<>uid://b7r46xrn62be::::res://Assets/Models/Particle Mesh/SpeedParticle_Mesh.obj<>uid://djh8hs1rsvuo3::::res://Assets/Models/BillBoard/BillBoard.blend<>uid://djh7c66dmoich::::res://Scenes/road_closed_sign.tscn<>uid://crtebv788thk6::::res://Scenes/cone.tscn
 ::res://Scripts/::1707956072
 Camera_Controller.cs::CSharpScript::-1::1707773836::0::1::::<>Node<>::
-Events_Controller.cs::CSharpScript::-1::1708520915::0::1::::<>Node3D<>::
+Events_Controller.cs::CSharpScript::-1::1708527629::0::1::::<>Node3D<>::
 Particles_Controller.cs::CSharpScript::-1::1706890849::0::1::::<>Node<>::
-vehiclebody_Controller.cs::CSharpScript::-1::1707775024::0::1::::<>Node<>::
+vehiclebody_Controller.cs::CSharpScript::-1::1708527623::0::1::::<>Node<>::
 World_Manager.cs::CSharpScript::-1::1707265311::0::1::::<>Node3D<>::
 ::res://Scripts/GUI/::1707956072
 MainMenuFunctions.cs::CSharpScript::-1::1708520059::0::1::::<>CanvasLayer<>::
 ::res://trailmesh/::1707956073
 README.md::TextFile::-1::1698532423::0::1::::<><>::
 trailmesh.gdextension::GDExtension::-1::1698532423::0::1::::<><>::
-::res://trailmesh/bin/::1708521483
+::res://trailmesh/bin/::1708634872
 ::res://trailmesh/bin/libtrailmesh.macos.debug.framework/::1707956073
 ::res://trailmesh/bin/libtrailmesh.macos.release.framework/::1707956073
 ::res://trailmesh/icons/::1707956073
