@@ -80,7 +80,7 @@
 		},
 		{
 			"mesh":5,
-			"name":"Road.002",
+			"name":"Desert.002",
 			"scale":[
 				0.9909257888793945,
 				0.9909257888793945,
@@ -200,7 +200,7 @@
 			]
 		},
 		{
-			"name":"Plane.012",
+			"name":"Plane.005",
 			"primitives":[
 				{
 					"attributes":{
@@ -209,7 +209,7 @@
 						"TEXCOORD_0":25,
 						"TANGENT":26
 					},
-					"indices":9,
+					"indices":27,
 					"material":1
 				}
 			]
@@ -407,14 +407,14 @@
 		{
 			"bufferView":23,
 			"componentType":5126,
-			"count":24,
+			"count":1200,
 			"max":[
-				0.09755508601665497,
-				0.00020546124142128974,
+				0.09751203656196594,
+				0.7323963642120361,
 				5
 			],
 			"min":[
-				-0.09755508601665497,
+				-0.09751203656196594,
 				0,
 				-5
 			],
@@ -423,20 +423,26 @@
 		{
 			"bufferView":24,
 			"componentType":5126,
-			"count":24,
+			"count":1200,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":25,
 			"componentType":5126,
-			"count":24,
+			"count":1200,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":26,
 			"componentType":5126,
-			"count":24,
+			"count":1200,
 			"type":"VEC4"
+		},
+		{
+			"bufferView":27,
+			"componentType":5123,
+			"count":2916,
+			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
@@ -580,32 +586,38 @@
 		},
 		{
 			"buffer":0,
-			"byteLength":288,
+			"byteLength":14400,
 			"byteOffset":5161656,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":288,
-			"byteOffset":5161944,
+			"byteLength":14400,
+			"byteOffset":5176056,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":192,
-			"byteOffset":5162232,
+			"byteLength":9600,
+			"byteOffset":5190456,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":384,
-			"byteOffset":5162424,
+			"byteLength":19200,
+			"byteOffset":5200056,
 			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":5832,
+			"byteOffset":5219256,
+			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":5162808,
+			"byteLength":5225088,
 			"uri":"Game_Map_1-bd7157508dce8b5d88348bb1ba2a81f0.bin"
 		}
 	]

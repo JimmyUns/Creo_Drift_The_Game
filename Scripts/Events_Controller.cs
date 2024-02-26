@@ -8,12 +8,16 @@ public partial class Events_Controller : Node3D
 	private int eventsIndex, lastEventsIndex;
 	[Export] private Node3D playerBody; //For Debugging
 
+	private bool isBlackScreenShowing;
+
 	//Controllers
 	[Export] private vehiclebody_Controller vhController;
 	[Export] private Camera_Controller camController;
 	//Animation Players
 	[Export] private AnimationPlayer eventAnim;
 	[Export] public AnimationPlayer uiAnim;
+	[Export] public AnimationPlayer blackscreenAnim;
+
 	//Nodes
 	[Export] private Camera3D mainCamera;
 	[Export] private Node3D camHolder;
@@ -30,23 +34,13 @@ public partial class Events_Controller : Node3D
 			StopGame();
 		}
 
-		if (Input.IsActionJustPressed("Skip"))
+		if (Input.IsActionJustPressed("Respawn"))
 		{
-			CheckPointSpawn();
-
-			mainCamera.Position = Vector3.Zero;
-			mainCamera.RotationDegrees = Vector3.Zero;
-
-			brokenGlassTextureRect.Visible = false;
+			_on_respawn_btn_button_down();
 		}
-		else if (Input.IsActionJustPressed("Skip2"))
+		else if (Input.IsActionJustPressed("Start_Over"))
 		{
-			StartingCutsceneAnimation();
-
-			mainCamera.Position = Vector3.Zero;
-			mainCamera.RotationDegrees = Vector3.Zero;
-
-			brokenGlassTextureRect.Visible = false;
+			_on_start_over_btn_button_down();
 		}
 
 		if (eventsIndex == 0) return;
@@ -95,20 +89,29 @@ public partial class Events_Controller : Node3D
 					//eventAnim.Plat();
 					eventsIndex++;
 				}
-				
+
 				break;
-				
+
 		}
 	}
 
-	public void CheckPointSpawn()
+	public void _on_respawn_btn_button_down()
 	{
+		blackscreenAnim.Play("BlackScreen_Checkpoint");
+	}
+
+	private void CheckPointSpawn()
+	{
+		mainCamera.Position = Vector3.Zero;
+		mainCamera.RotationDegrees = Vector3.Zero;
+
+		brokenGlassTextureRect.Visible = false;
 		switch (lastEventsIndex)
 		{
 			case 2: //Billboard Animation
 				playerBody.GlobalPosition = new Vector3(0f, -5.7153025f, -473f);
 				//playerBody.GlobalPosition = new Vector3(0f, -5.7153025f, -900f);
-				
+
 				playerBody.Visible = true;
 				currentTime = 12.1f;
 				eventsIndex = 3;
@@ -142,16 +145,26 @@ public partial class Events_Controller : Node3D
 		eventsIndex = 0;
 		currentTime = 0f;
 		vhController.isActive = false;
-		vhController.vBody.LinearVelocity = Vector3.Zero;
+		vhController.vBody.Velocity = Vector3.Zero;
 		foreach (AudioStreamPlayer gameM in gameMusic)
 		{
 			gameM.Stop();
 		}
 		eventAnim.Play("Player_Death");
 	}
+	
+	public void _on_start_over_btn_button_down()
+	{
+		blackscreenAnim.Play("BlackScreen_Starting");
+	}
 
 	public void StartingCutsceneAnimation()
 	{
+		mainCamera.Position = Vector3.Zero;
+		mainCamera.RotationDegrees = Vector3.Zero;
+
+		brokenGlassTextureRect.Visible = false;
+
 		mainCamera.GetNode<Camera3D>(mainCamera.GetPath()).Fov = 55f;
 		eventAnim.Play("Game Starting Cutscene Animation");
 		gameMusic[0].Play();
@@ -167,4 +180,5 @@ public partial class Events_Controller : Node3D
 		vhController.isActive = true;
 		vhController.inputEnabled = true;
 	}
+
 }
