@@ -1,17 +1,24 @@
 using Godot;
 using System;
 using System.Diagnostics;
+using UI.SFX;
 
 public partial class MainMenuFunctions : CanvasLayer
 {
 	[Export] private AnimationPlayer mainmenuCamAnim;
+	[Export] private UI_SFX_Manager uiSFX_Manager;
 	[Export] private Node3D mainmenu_Map, game_Map;
 	[Export] private Events_Controller eventsController;
 	[Export] private DirectionalLight3D dirLight;
+	[Export] private AudioStreamPlayer mainmenu_Music;
+	
 
 
 	[Export] private CanvasLayer mainCanvas;
 	[Export] private VBoxContainer optionsContainer;
+	
+	private bool isLerpingMainMenuMusic;
+	
 
 
 	// Called when the node enters the scene tree for the first time.
@@ -25,13 +32,22 @@ public partial class MainMenuFunctions : CanvasLayer
 
 		mainCanvas.Visible = true;
 		optionsContainer.Visible = false;
+		
+		mainmenu_Music.VolumeDb = -80f;
+		mainmenu_Music.Play();
+		isLerpingMainMenuMusic = true;
+		eventsController.mainCamera.Fov = 75f;
 
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-
+		if(isLerpingMainMenuMusic)
+		{
+			mainmenu_Music.VolumeDb = Mathf.Lerp(mainmenu_Music.VolumeDb,0.5f, (float)delta);
+			if(mainmenu_Music.VolumeDb >= 0) isLerpingMainMenuMusic = false;
+		}
 	}
 
 	public void StartingCutsceneAnimation()
@@ -50,6 +66,7 @@ public partial class MainMenuFunctions : CanvasLayer
 		mainCanvas.Visible = false;
 		optionsContainer.Visible = false;
 		mainmenuCamAnim.Play("Main Menu To Game Animation");
+		
 	}
 
 	public void _on_options_button_button_down()

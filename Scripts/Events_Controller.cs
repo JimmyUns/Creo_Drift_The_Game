@@ -19,7 +19,7 @@ public partial class Events_Controller : Node3D
 	[Export] public AnimationPlayer blackscreenAnim;
 
 	//Nodes
-	[Export] private Camera3D mainCamera;
+	[Export] public Camera3D mainCamera;
 	[Export] private Node3D camHolder;
 	[Export] private AudioStreamPlayer[] gameMusic;
 	[Export] private TextureRect brokenGlassTextureRect;

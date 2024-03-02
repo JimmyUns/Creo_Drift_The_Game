@@ -1,26 +1,33 @@
-[gd_scene load_steps=67 format=3 uid="uid://fsjqp0uj201q"]
+[gd_scene load_steps=80 format=3 uid="uid://fsjqp0uj201q"]
 
 [ext_resource type="Script" path="res://Scripts/World_Manager.cs" id="1_1hiu4"]
 [ext_resource type="AudioStream" uid="uid://dq1qdq4stpgsj" path="res://Assets/Audio/Music/Creo - Drift - Full.mp3" id="3_1if58"]
+[ext_resource type="Script" path="res://Scripts/GUI/UI_SFX_Manager.cs" id="3_6qqta"]
 [ext_resource type="Script" path="res://Scripts/vehiclebody_Controller.cs" id="3_7ijs1"]
 [ext_resource type="Script" path="res://Scripts/Events_Controller.cs" id="4_0yhfr"]
 [ext_resource type="Script" path="res://Scripts/Camera_Controller.cs" id="4_8c4pu"]
 [ext_resource type="Script" path="res://Scripts/GUI/MainMenuFunctions.cs" id="4_8nri5"]
+[ext_resource type="AudioStream" uid="uid://g5ggiodprf8r" path="res://Assets/Audio/UI/Click.mp3" id="4_ft6x0"]
 [ext_resource type="AudioStream" uid="uid://csmvp18s2va8p" path="res://Assets/Audio/Music/Creo - Drift - BillBoard.mp3" id="4_qedd7"]
-[ext_resource type="Texture2D" uid="uid://b2m6514gaty5a" path="res://Assets/Sprites/Text_Sprite/A_Button_Normal.png" id="5_7wmo7"]
 [ext_resource type="Script" path="res://Scripts/Particles_Controller.cs" id="5_36x4j"]
 [ext_resource type="Animation" uid="uid://8g3xa3jjfefb" path="res://Game Starting Cutscene Animation.res" id="5_acsql"]
-[ext_resource type="Texture2D" uid="uid://6ibmmohwyvua" path="res://Assets/Sprites/Text_Sprite/A_Button_Pressed.png" id="6_6a1dy"]
+[ext_resource type="AudioStream" uid="uid://dvn3hja5vav7t" path="res://Assets/Audio/UI/Hover.mp3" id="5_qj0j4"]
 [ext_resource type="Texture2D" uid="uid://cns5i1b56dqpn" path="res://Assets/Sprites/Vignette.png" id="6_6w7s8"]
-[ext_resource type="Texture2D" uid="uid://57qc5eur3twv" path="res://Assets/Sprites/Text_Sprite/D_Button_Normal.png" id="6_gmg56"]
+[ext_resource type="AudioStream" uid="uid://dkg6ajsdtkdsa" path="res://Assets/Audio/UI/Switch_On.mp3" id="6_v7hfy"]
+[ext_resource type="AudioStream" uid="uid://co5mmrx4h6et7" path="res://Assets/Audio/Music/Main - Menu - Full.mp3" id="7_qdmgy"]
 [ext_resource type="Texture2D" uid="uid://cypsmtct1h2nr" path="res://test.png" id="7_rvtvu"]
-[ext_resource type="Texture2D" uid="uid://bdgvg4wu6vde4" path="res://Assets/Sprites/Text_Sprite/D_Button_Pressed.png" id="8_mna5s"]
+[ext_resource type="Texture2D" uid="uid://dtktqfelokf2t" path="res://Assets/Sprites/UI_Sprites/Input Icons/Keyboard & Mouse/Default/keyboard_a_outline.png" id="7_y60uj"]
+[ext_resource type="Texture2D" uid="uid://b8ekcfdctbepf" path="res://Assets/Sprites/UI_Sprites/Input Icons/Keyboard & Mouse/Default/keyboard_a.png" id="8_e2i7y"]
 [ext_resource type="ArrayMesh" uid="uid://5a38hxoml5dd" path="res://Assets/Models/Dust/Dust_1.obj" id="8_mo6rm"]
 [ext_resource type="Texture2D" uid="uid://eecdexwj5ipx" path="res://Assets/Sprites/Broken_Screen_Glass.png" id="9_m7kwl"]
+[ext_resource type="Texture2D" uid="uid://dabhrk52pwbc0" path="res://Assets/Sprites/UI_Sprites/Input Icons/Keyboard & Mouse/Default/keyboard_d_outline.png" id="9_ngvqg"]
 [ext_resource type="AudioStream" uid="uid://bxvci68d6nded" path="res://Assets/Audio/Glass_breaking.mp3" id="10_ujba1"]
+[ext_resource type="Texture2D" uid="uid://b0py2n2cwlkya" path="res://Assets/Sprites/UI_Sprites/Input Icons/Keyboard & Mouse/Default/keyboard_d.png" id="10_vnmw8"]
 [ext_resource type="AudioStream" uid="uid://peaf4lhpkqer" path="res://Assets/Audio/Car_Crash.mp3" id="11_kcjp4"]
 [ext_resource type="PackedScene" uid="uid://bxc2ypo5hl7uc" path="res://Assets/Models/Map/Main_Menu_Map.blend" id="12_ekasq"]
 [ext_resource type="Material" uid="uid://d2f1njl4x83ty" path="res://Assets/Models/Particle Mesh/Materials/SpeedParticle_Mat.tres" id="12_h4b8a"]
+[ext_resource type="Texture2D" uid="uid://dmncoqcqmk2g6" path="res://Assets/Sprites/UI_Sprites/Input Icons/Keyboard & Mouse/Default/keyboard_r_outline.png" id="12_hu5t6"]
+[ext_resource type="Texture2D" uid="uid://oqt3ybni15a8" path="res://Assets/Sprites/UI_Sprites/Input Icons/Keyboard & Mouse/Default/keyboard_l_outline.png" id="13_hnelb"]
 [ext_resource type="PackedScene" uid="uid://tay3373xyf4t" path="res://Assets/Models/Map/Game_Maps/Game_Map_1.blend" id="13_mf6gq"]
 [ext_resource type="ArrayMesh" uid="uid://b7r46xrn62be" path="res://Assets/Models/Particle Mesh/SpeedParticle_Mesh.obj" id="13_o4iaw"]
 [ext_resource type="PackedScene" uid="uid://djh8hs1rsvuo3" path="res://Assets/Models/BillBoard/BillBoard.blend" id="14_1yhms"]
@@ -29,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://djh7c66dmoich" path="res://Scenes/road_closed_sign.tscn" id="24_jmq5w"]
 [ext_resource type="PackedScene" uid="uid://crtebv788thk6" path="res://Scenes/cone.tscn" id="25_j2woa"]
 [ext_resource type="PackedScene" uid="uid://bayvckw5s2pha" path="res://Assets/Models/Props/Breakable_Traffic.blend" id="29_uu5ib"]
+[ext_resource type="Texture2D" uid="uid://cptb13fjk1wtb" path="res://Assets/Sprites/MusicNote.png" id="32_sl4v3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y5cs4"]
 sky_top_color = Color(0.203922, 0.6, 0.941176, 1)
@@ -644,7 +652,7 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("../World Miscs/Camera Holder")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -24.934, 1.367, 21.069)
+tracks/0/keys = PackedFloat32Array(0, 1, -24.934, -3.193, 21.069)
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -693,7 +701,7 @@ tracks/1/enabled = true
 tracks/1/path = NodePath("../World Miscs/Camera Holder")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, -24.934, 1.367, 21.069, 0.9, 1, -24.934, 4.132, 21.069, 1.5, 1, -26, 3.5, 21.069, 2.9, 1, 20, 16.5, 21.069, 5.6, 1, 28, 56.5, 21.069)
+tracks/1/keys = PackedFloat32Array(0, 1, -24.934, -3.193, 21.069, 2.9, 1, -24.934, 16, 21.069, 5.6, 1, 28, 56.5, 21.069)
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
@@ -701,10 +709,22 @@ tracks/2/path = NodePath("../World Miscs/Camera Holder:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 2.1, 3.7, 5.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.6, 3.2, 5.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, -1.04526, 0), Vector3(0, -1.5708, 0), Vector3(0.261799, -1.5708, 0), Vector3(0.610865, -1.5708, 0), Vector3(1.5708, -1.91986, 0)]
+"values": [Vector3(0, -1.04526, 0), Vector3(0.261799, -1.5708, 0), Vector3(0.610865, -1.5708, 0), Vector3(1.5708, -1.91986, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../World Miscs/Game Music Holder/Main Menu Music:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yc245"]
@@ -852,6 +872,29 @@ scale_curve = SubResource("CurveTexture_uojkw")
 [sub_resource type="BoxShape3D" id="BoxShape3D_kq7kw"]
 size = Vector3(1, 1, 2.27194)
 
+[sub_resource type="Curve" id="Curve_lkcuw"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_otffj"]
+curve = SubResource("Curve_lkcuw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_sqgh5"]
+gravity = Vector3(-0.11, 0.5, 0)
+scale_curve = SubResource("CurveTexture_otffj")
+turbulence_enabled = true
+turbulence_noise_scale = 0.5
+turbulence_influence_min = 0.025
+turbulence_influence_max = 0.052
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8us1d"]
+transparency = 1
+albedo_texture = ExtResource("32_sl4v3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_amj73"]
+material = SubResource("StandardMaterial3D_8us1d")
+size = Vector2(0.05, 0.05)
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6p7tl"]
 data = PackedVector3Array(-0.0976, 0, 4.9999, 0.0976, 0, -5, -0.0976, 0, -5, -0.0976, 0, 4.9999, 0.0976, 0, 4.9999, 0.0976, 0, -5, -0.0976, 0.0002, 4.9999, 0.0976, 0.0002, -5, 0.0976, 0.0002, 4.9999, -0.0976, 0.0002, 4.9999, -0.0976, 0.0002, -5, 0.0976, 0.0002, -5, -0.0976, 0, -5, -0.0976, 0.0002, 4.9999, -0.0976, 0, 4.9999, -0.0976, 0, -5, -0.0976, 0.0002, -5, -0.0976, 0.0002, 4.9999, -0.0976, 0, 4.9999, 0.0976, 0.0002, 4.9999, 0.0976, 0, 4.9999, -0.0976, 0, 4.9999, -0.0976, 0.0002, 4.9999, 0.0976, 0.0002, 4.9999, 0.0976, 0, 4.9999, 0.0976, 0.0002, -5, 0.0976, 0, -5, 0.0976, 0, 4.9999, 0.0976, 0.0002, 4.9999, 0.0976, 0.0002, -5, 0.0976, 0, -5, -0.0976, 0.0002, -5, -0.0976, 0, -5, 0.0976, 0, -5, 0.0976, 0.0002, -5, -0.0976, 0.0002, -5)
 
@@ -891,7 +934,28 @@ size_flags_vertical = 6
 texture = ExtResource("6_6w7s8")
 expand_mode = 3
 
+[node name="Game Sfx Holder" type="Node" parent="World Miscs" node_paths=PackedStringArray("click_SFX", "hover_SFX", "switchOn_SFX")]
+script = ExtResource("3_6qqta")
+click_SFX = NodePath("Click_Audio")
+hover_SFX = NodePath("Hover_Audio")
+switchOn_SFX = NodePath("Switch_On_Audio")
+
+[node name="Click_Audio" type="AudioStreamPlayer" parent="World Miscs/Game Sfx Holder"]
+stream = ExtResource("4_ft6x0")
+volume_db = -30.0
+
+[node name="Hover_Audio" type="AudioStreamPlayer" parent="World Miscs/Game Sfx Holder"]
+stream = ExtResource("5_qj0j4")
+volume_db = -30.0
+
+[node name="Switch_On_Audio" type="AudioStreamPlayer" parent="World Miscs/Game Sfx Holder"]
+stream = ExtResource("6_v7hfy")
+volume_db = -30.0
+
 [node name="Game Music Holder" type="Node" parent="World Miscs"]
+
+[node name="Main Menu Music" type="AudioStreamPlayer" parent="World Miscs/Game Music Holder"]
+stream = ExtResource("7_qdmgy")
 
 [node name="0" type="AudioStreamPlayer" parent="World Miscs/Game Music Holder"]
 stream = ExtResource("3_1if58")
@@ -900,14 +964,14 @@ stream = ExtResource("3_1if58")
 stream = ExtResource("4_qedd7")
 
 [node name="Camera Holder" type="Node3D" parent="World Miscs"]
-transform = Transform3D(-0.230422, 0.73784, -0.634428, 0.265851, 0.674901, 0.688354, 0.936071, -0.010051, -0.351667, -27.101, 124.398, -1826.04)
+transform = Transform3D(0.501677, 0, -0.865055, 0, 1, 0, 0.865055, 0, 0.501677, -24.934, -3.193, 21.069)
 
 [node name="Offset" type="Node3D" parent="World Miscs/Camera Holder"]
-transform = Transform3D(1, 0, -2.98023e-08, 0, 1, -1.49012e-08, 2.98023e-08, -7.45058e-09, 1, -1.49012e-08, 3.5, -5.96046e-08)
+transform = Transform3D(1, 2.22044e-16, -2.98023e-08, 0, 1, 7.45058e-09, 2.98023e-08, -7.45058e-09, 1, -1.49012e-08, 3.5, -5.96046e-08)
 
 [node name="Main Camera" type="Camera3D" parent="World Miscs/Camera Holder/Offset"]
+transform = Transform3D(1, 0, 0, 0, 1, -7.45058e-09, 0, 7.45058e-09, 1, 0, 0, 0)
 attributes = SubResource("CameraAttributesPractical_nxqsx")
-fov = 40.0
 
 [node name="Events Controller" type="Node3D" parent="World Miscs" node_paths=PackedStringArray("playerBody", "vhController", "camController", "eventAnim", "uiAnim", "blackscreenAnim", "mainCamera", "camHolder", "gameMusic", "brokenGlassTextureRect")]
 script = ExtResource("4_0yhfr")
@@ -958,7 +1022,7 @@ offset_right = 450.0
 offset_bottom = 226.0
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("5_7wmo7")
+texture = ExtResource("7_y60uj")
 expand_mode = 1
 
 [node name="A_Pressed_Texture" type="TextureRect" parent="World Miscs/Game UI Control/AD_Canvas"]
@@ -973,7 +1037,7 @@ offset_right = 450.0
 offset_bottom = 226.0
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("6_6a1dy")
+texture = ExtResource("8_e2i7y")
 expand_mode = 1
 
 [node name="D_Texture" type="TextureRect" parent="World Miscs/Game UI Control/AD_Canvas"]
@@ -990,7 +1054,7 @@ offset_bottom = 226.0
 grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("6_gmg56")
+texture = ExtResource("9_ngvqg")
 expand_mode = 1
 
 [node name="D_Pressed_Texture" type="TextureRect" parent="World Miscs/Game UI Control/AD_Canvas"]
@@ -1008,7 +1072,7 @@ offset_bottom = 226.0
 grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("8_mna5s")
+texture = ExtResource("10_vnmw8")
 expand_mode = 1
 
 [node name="Broken_Glass_Texture" type="TextureRect" parent="World Miscs/Game UI Control"]
@@ -1021,27 +1085,41 @@ mouse_filter = 2
 texture = ExtResource("9_m7kwl")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="World Miscs/Game UI Control/Broken_Glass_Texture"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
+[node name="Respawn_Texture" type="TextureRect" parent="World Miscs/Game UI Control/Broken_Glass_Texture"]
+layout_mode = 0
 offset_left = 33.0
-offset_top = -149.0
-offset_right = 292.0
-offset_bottom = -27.0
-grow_vertical = 0
-alignment = 1
+offset_top = 535.0
+offset_right = 97.0
+offset_bottom = 599.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_hu5t6")
 
-[node name="Respawn_Btn" type="Label" parent="World Miscs/Game UI Control/Broken_Glass_Texture/VBoxContainer"]
+[node name="Respawn_Btn" type="Label" parent="World Miscs/Game UI Control/Broken_Glass_Texture"]
 layout_mode = 2
+offset_left = 74.0
+offset_top = 540.0
+offset_right = 333.0
+offset_bottom = 568.0
 theme_override_font_sizes/font_size = 20
-text = "Press [R] to continue!"
+text = "Continue"
 
-[node name="StartOver_Btn" type="Label" parent="World Miscs/Game UI Control/Broken_Glass_Texture/VBoxContainer"]
+[node name="StartOver_Texture" type="TextureRect" parent="World Miscs/Game UI Control/Broken_Glass_Texture"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 572.0
+offset_right = 97.0
+offset_bottom = 636.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_hnelb")
+
+[node name="StartOver_Btn" type="Label" parent="World Miscs/Game UI Control/Broken_Glass_Texture"]
 layout_mode = 2
+offset_left = 74.0
+offset_top = 577.0
+offset_right = 333.0
+offset_bottom = 605.0
 theme_override_font_sizes/font_size = 20
-text = "Press [L] to start over!"
+text = "Start Over"
 
 [node name="Black Screen" type="ColorRect" parent="World Miscs/Game UI Control"]
 layout_mode = 1
@@ -1088,13 +1166,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_88l1v")
 
-[node name="Main Menu Canvas" type="CanvasLayer" parent="Main Menu Nodes/Control" node_paths=PackedStringArray("mainmenuCamAnim", "mainmenu_Map", "game_Map", "eventsController", "dirLight", "mainCanvas", "optionsContainer")]
+[node name="Main Menu Canvas" type="CanvasLayer" parent="Main Menu Nodes/Control" node_paths=PackedStringArray("mainmenuCamAnim", "uiSFX_Manager", "mainmenu_Map", "game_Map", "eventsController", "dirLight", "mainmenu_Music", "mainCanvas", "optionsContainer")]
 script = ExtResource("4_8nri5")
 mainmenuCamAnim = NodePath("../../Main Menu Animations")
+uiSFX_Manager = NodePath("../../../World Miscs/Game Sfx Holder")
 mainmenu_Map = NodePath("../../../Map/Main Menu Area")
 game_Map = NodePath("../../../Map/Game Map")
 eventsController = NodePath("../../../World Miscs/Events Controller")
 dirLight = NodePath("../../../World Miscs/DirectionalLight3D")
+mainmenu_Music = NodePath("../../../World Miscs/Game Music Holder/Main Menu Music")
 mainCanvas = NodePath("Main Canvas")
 optionsContainer = NodePath("Options_Container")
 
@@ -1222,7 +1302,8 @@ libraries = {
 }
 
 [node name="Body" type="CharacterBody3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 0.901297, -0.433203, 0, 0.433203, 0.901297, 2.5, 82.153, -1736.11)
+transform = Transform3D(1, 0, 0, 0, 0.901297, -0.433203, 0, 0.433203, 0.901297, 0, -9.088, 33.513)
+visible = false
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
@@ -1342,12 +1423,25 @@ size = Vector3(12.6715, 5.16748, 1)
 [node name="Map" type="Node3D" parent="."]
 
 [node name="Main Menu Area" type="Node3D" parent="Map"]
-visible = false
 
 [node name="Main_Menu_Map" parent="Map/Main Menu Area" instance=ExtResource("12_ekasq")]
 transform = Transform3D(-3.97809, 0, -0.418114, 0, 4, 0, 0.418114, 0, -3.97809, -29.353, 0, 30.77)
 
+[node name="Radio" type="CSGBox3D" parent="Map/Main Menu Area"]
+transform = Transform3D(0.314797, 0, -0.34202, 0, 0.71, 0, 0.114577, 0, 0.939693, -23.967, 0.118, 21.115)
+size = Vector3(0.313477, 0.323364, 0.359375)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Map/Main Menu Area/Radio"]
+transform = Transform3D(-1.19209e-07, -0.85264, 0.522499, -4.56783e-08, -0.522498, -0.85264, 1, -6.70552e-08, -2.6077e-08, -0.112923, 0.184286, 0.141254)
+amount = 3
+lifetime = 2.0
+randomness = 1.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_sqgh5")
+draw_pass_1 = SubResource("PlaneMesh_amj73")
+
 [node name="Game Map" type="Node3D" parent="Map"]
+visible = false
 
 [node name="Game_Map_1" parent="Map/Game Map" instance=ExtResource("13_mf6gq")]
 transform = Transform3D(110, 0, 0, 0, 110, 0, 0, 0, 110, 0, -5.104, -500)
@@ -1917,13 +2011,29 @@ transform = Transform3D(0.00638448, 0, -0.00634338, 0, 0.009, 0, 0.00634338, 0, 
 transform = Transform3D(0.00803348, 0, 0.00405748, 0, 0.009, 0, -0.00405748, 0, 0.00803348, -0.0902434, 0.977343, -2.18512)
 
 [connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Start_Button" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_start_button_button_down"]
+[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Start_Button" to="World Miscs/Game Sfx Holder" method="_on_button_down"]
+[connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Start_Button" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
 [connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Options_Button" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_options_button_button_down"]
+[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Options_Button" to="World Miscs/Game Sfx Holder" method="_on_button_down"]
+[connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Options_Button" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
 [connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Exit_Button" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_exit_button_button_down"]
+[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Exit_Button" to="World Miscs/Game Sfx Holder" method="_on_button_down"]
+[connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Exit_Button" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
 [connection signal="item_selected" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Anti-aliasing_OptionsBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_antialiasing_options_btn_item_selected"]
+[connection signal="item_selected" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Anti-aliasing_OptionsBtn" to="World Miscs/Game Sfx Holder" method="_on_item_selected"]
+[connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Anti-aliasing_OptionsBtn" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
+[connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ScreenSpaceAA_CheckBtn" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
 [connection signal="toggled" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ScreenSpaceAA_CheckBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_screen_space_aa_check_btn_toggled"]
+[connection signal="toggled" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ScreenSpaceAA_CheckBtn" to="World Miscs/Game Sfx Holder" method="_on_item_selected"]
+[connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/UseTAA_CheckBtn" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
 [connection signal="toggled" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/UseTAA_CheckBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_use_taa_check_btn_toggled"]
+[connection signal="toggled" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/UseTAA_CheckBtn" to="World Miscs/Game Sfx Holder" method="_on_item_selected"]
 [connection signal="item_selected" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ShadowQuality_OptionsBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_shadow_quality_options_btn_item_selected"]
+[connection signal="item_selected" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ShadowQuality_OptionsBtn" to="World Miscs/Game Sfx Holder" method="_on_item_selected"]
+[connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ShadowQuality_OptionsBtn" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
 [connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Back" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_back_button_down"]
+[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Back" to="World Miscs/Game Sfx Holder" method="_on_button_down"]
+[connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Back" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
 [connection signal="body_entered" from="Player/Body/Area Checker" to="World Miscs/Events Controller" method="_on_area_checker_body_entered"]
 
 [editable path="Player/Body/Car_Model"]

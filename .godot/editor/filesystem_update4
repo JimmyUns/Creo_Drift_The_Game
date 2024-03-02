@@ -13,6 +13,7 @@ res://Scenes/cone.tscn
 res://Scripts/Camera_Controller.cs
 res://Scripts/Events_Controller.cs
 res://Scripts/GUI/MainMenuFunctions.cs
+res://Scripts/GUI/UI_SFX_Manager.cs
 res://Scripts/Particles_Controller.cs
 res://Scripts/vehiclebody_Controller.cs
 res://Scripts/World_Manager.cs

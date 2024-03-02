@@ -1,4 +1,5 @@
 C:/Users/hp/Desktop/Creo Drift The Game
+res://Scripts/GUI
 res://
 res://Scenes
 res://Assets/Sprites
@@ -7,6 +8,5 @@ res://Scripts
 res://Assets/Models/Particle Mesh/Materials
 res://Assets/Models/BillBoard/Materials
 res://Assets/Models/Map/Materials
-res://Scripts/GUI
 res://Assets/Models/Dust
 res://Assets/Models/Car
