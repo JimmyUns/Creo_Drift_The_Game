@@ -79,14 +79,17 @@ public partial class Events_Controller : Node3D
 					eventAnim.Play("Selfies_Animation_1");
 					mainCamera.Fov = 55f;
 
-
 					eventsIndex++;
 				}
 				break;
 			case 4:
 				if (currentTime > 34.096f)
 				{
-					//eventAnim.Plat();
+					vhController.inputEnabled = false;
+					camController.smoothLerp = false;
+					eventAnim.Play("Hill_Jumping_Cutscene");
+					mainCamera.Fov = 55f;
+
 					eventsIndex++;
 				}
 
@@ -134,6 +137,15 @@ public partial class Events_Controller : Node3D
 
 	}
 
+	public void HillJumpingCutsceneEvent2()
+	{
+		camController.isActive = false;
+		camController.smoothLerp = true;
+		vhController.isActive = false;
+
+		eventAnim.Play("Hill_Jumping_Cutscene_2");
+	}
+
 	private void _on_area_checker_body_entered(Node3D body)
 	{
 		StopGame();
@@ -152,7 +164,7 @@ public partial class Events_Controller : Node3D
 		}
 		eventAnim.Play("Player_Death");
 	}
-	
+
 	public void _on_start_over_btn_button_down()
 	{
 		blackscreenAnim.Play("BlackScreen_Starting");

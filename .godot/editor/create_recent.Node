@@ -1,4 +1,5 @@
 Label
+Node3D
 CanvasLayer
 Node
 VBoxContainer
@@ -11,4 +12,3 @@ CSGMesh3D
 CharacterBody3D
 OptionButton
 CheckButton
-Node3D

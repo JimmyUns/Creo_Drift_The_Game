@@ -25,6 +25,7 @@ public partial class vehiclebody_Controller : Node
 
 	public override void _Ready()
 	{
+		vBody.RotationDegrees = Vector3.Zero;
 		carAnim.Play("Rotate_Wheels");
 	}
 

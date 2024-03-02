@@ -4,6 +4,7 @@ using System;
 public partial class Camera_Controller : Node
 {
 	public bool isActive;
+	public bool smoothLerp = true;
 	
 	[Export] private Node3D vehicleBody;
 	[Export] private Node3D camHolder;
@@ -14,7 +15,10 @@ public partial class Camera_Controller : Node
 	public override void _PhysicsProcess(double delta)
 	{
 		if(isActive == false) return;
-		camHolder.GlobalPosition = camHolder.GlobalPosition.Lerp(vehicleBody.GlobalPosition, (float)delta * 7f);
+		if(smoothLerp)
+			camHolder.GlobalPosition = camHolder.GlobalPosition.Lerp(vehicleBody.GlobalPosition, (float)delta * 7f);
+		else
+			camHolder.GlobalPosition = vehicleBody.GlobalPosition;
 		
 	}
 	
