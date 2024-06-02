@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://fsjqp0uj201q"]
+[gd_scene load_steps=81 format=3 uid="uid://fsjqp0uj201q"]
 
 [ext_resource type="Script" path="res://Scripts/World_Manager.cs" id="1_1hiu4"]
 [ext_resource type="AudioStream" uid="uid://dq1qdq4stpgsj" path="res://Assets/Audio/Music/Creo - Drift - Full.mp3" id="3_1if58"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://djh7c66dmoich" path="res://Scenes/road_closed_sign.tscn" id="24_jmq5w"]
 [ext_resource type="PackedScene" uid="uid://crtebv788thk6" path="res://Scenes/cone.tscn" id="25_j2woa"]
 [ext_resource type="PackedScene" uid="uid://bayvckw5s2pha" path="res://Assets/Models/Props/Breakable_Traffic.blend" id="29_uu5ib"]
+[ext_resource type="ArrayMesh" uid="uid://u6ncu6mt72t2" path="res://Assets/Models/Props/radio.obj" id="32_80x3t"]
 [ext_resource type="Texture2D" uid="uid://cptb13fjk1wtb" path="res://Assets/Sprites/MusicNote.png" id="32_sl4v3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y5cs4"]
@@ -889,7 +890,9 @@ turbulence_influence_max = 0.052
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8us1d"]
 transparency = 1
+albedo_color = Color(1, 1, 1, 0.682353)
 albedo_texture = ExtResource("32_sl4v3")
+disable_receive_shadows = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_amj73"]
 material = SubResource("StandardMaterial3D_8us1d")
@@ -1427,18 +1430,34 @@ size = Vector3(12.6715, 5.16748, 1)
 [node name="Main_Menu_Map" parent="Map/Main Menu Area" instance=ExtResource("12_ekasq")]
 transform = Transform3D(-3.97809, 0, -0.418114, 0, 4, 0, 0.418114, 0, -3.97809, -29.353, 0, 30.77)
 
-[node name="Radio" type="CSGBox3D" parent="Map/Main Menu Area"]
-transform = Transform3D(0.314797, 0, -0.34202, 0, 0.71, 0, 0.114577, 0, 0.939693, -23.967, 0.118, 21.115)
-size = Vector3(0.313477, 0.323364, 0.359375)
+[node name="Radio" type="MeshInstance3D" parent="Map/Main Menu Area"]
+transform = Transform3D(-0.00285504, 0, -0.00958377, 0, 0.01, 0, 0.00958377, 0, -0.00285504, -23.9586, -0.0100554, 21.1362)
+cast_shadow = 0
+mesh = ExtResource("32_80x3t")
+skeleton = NodePath("../../..")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Map/Main Menu Area/Radio"]
-transform = Transform3D(-1.19209e-07, -0.85264, 0.522499, -4.56783e-08, -0.522498, -0.85264, 1, -6.70552e-08, -2.6077e-08, -0.112923, 0.184286, 0.141254)
+transform = Transform3D(99.8229, -1.6995, 1.04145, -3.24316e-06, -37.0974, -60.5374, 5.94979, 28.5128, -17.4727, 13.4063, 15.8024, 11.0988)
 amount = 3
 lifetime = 2.0
 randomness = 1.0
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_sqgh5")
 draw_pass_1 = SubResource("PlaneMesh_amj73")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="Map/Main Menu Area/Radio"]
+transform = Transform3D(99.8229, -1.6995, 1.04145, -3.24316e-06, -37.0974, -60.5374, 5.94979, 28.5128, -17.4727, -15.5842, 15.8024, 9.37073)
+amount = 3
+lifetime = 1.5
+randomness = 1.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_sqgh5")
+draw_pass_1 = SubResource("PlaneMesh_amj73")
+
+[node name="Shadow" type="CSGBox3D" parent="Map/Main Menu Area/Radio"]
+transform = Transform3D(1.9932, 0, 99.8228, 0, 71, 0, -33.4406, 0, 5.94978, 0.2771, 12.8055, 1.53333)
+cast_shadow = 3
+size = Vector3(0.313477, 0.323364, 0.359375)
 
 [node name="Game Map" type="Node3D" parent="Map"]
 visible = false
@@ -2010,29 +2029,30 @@ transform = Transform3D(0.00638448, 0, -0.00634338, 0, 0.009, 0, 0.00634338, 0, 
 [node name="Cone71" parent="Map/Game Map/Game_Map_1/Road Part 1/Breakable Traffic Part" instance=ExtResource("25_j2woa")]
 transform = Transform3D(0.00803348, 0, 0.00405748, 0, 0.009, 0, -0.00405748, 0, 0.00803348, -0.0902434, 0.977343, -2.18512)
 
-[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Start_Button" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_start_button_button_down"]
+[connection signal="finished" from="World Miscs/Game Music Holder/Main Menu Music" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_main_menu_music_finished"]
 [connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Start_Button" to="World Miscs/Game Sfx Holder" method="_on_button_down"]
+[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Start_Button" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_start_button_button_down"]
 [connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Start_Button" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
-[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Options_Button" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_options_button_button_down"]
 [connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Options_Button" to="World Miscs/Game Sfx Holder" method="_on_button_down"]
+[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Options_Button" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_options_button_button_down"]
 [connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Options_Button" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
-[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Exit_Button" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_exit_button_button_down"]
 [connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Exit_Button" to="World Miscs/Game Sfx Holder" method="_on_button_down"]
+[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Exit_Button" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_exit_button_button_down"]
 [connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Main Canvas/Exit_Button" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
-[connection signal="item_selected" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Anti-aliasing_OptionsBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_antialiasing_options_btn_item_selected"]
 [connection signal="item_selected" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Anti-aliasing_OptionsBtn" to="World Miscs/Game Sfx Holder" method="_on_item_selected"]
+[connection signal="item_selected" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Anti-aliasing_OptionsBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_antialiasing_options_btn_item_selected"]
 [connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Anti-aliasing_OptionsBtn" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
 [connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ScreenSpaceAA_CheckBtn" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
-[connection signal="toggled" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ScreenSpaceAA_CheckBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_screen_space_aa_check_btn_toggled"]
 [connection signal="toggled" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ScreenSpaceAA_CheckBtn" to="World Miscs/Game Sfx Holder" method="_on_item_selected"]
+[connection signal="toggled" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ScreenSpaceAA_CheckBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_screen_space_aa_check_btn_toggled"]
 [connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/UseTAA_CheckBtn" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
-[connection signal="toggled" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/UseTAA_CheckBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_use_taa_check_btn_toggled"]
 [connection signal="toggled" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/UseTAA_CheckBtn" to="World Miscs/Game Sfx Holder" method="_on_item_selected"]
-[connection signal="item_selected" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ShadowQuality_OptionsBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_shadow_quality_options_btn_item_selected"]
+[connection signal="toggled" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/UseTAA_CheckBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_use_taa_check_btn_toggled"]
 [connection signal="item_selected" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ShadowQuality_OptionsBtn" to="World Miscs/Game Sfx Holder" method="_on_item_selected"]
+[connection signal="item_selected" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ShadowQuality_OptionsBtn" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_shadow_quality_options_btn_item_selected"]
 [connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/ShadowQuality_OptionsBtn" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
-[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Back" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_back_button_down"]
 [connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Back" to="World Miscs/Game Sfx Holder" method="_on_button_down"]
+[connection signal="button_down" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Back" to="Main Menu Nodes/Control/Main Menu Canvas" method="_on_back_button_down"]
 [connection signal="mouse_entered" from="Main Menu Nodes/Control/Main Menu Canvas/Options_Container/Back" to="World Miscs/Game Sfx Holder" method="_on_button_mouse_entered"]
 [connection signal="body_entered" from="Player/Body/Area Checker" to="World Miscs/Events Controller" method="_on_area_checker_body_entered"]
 

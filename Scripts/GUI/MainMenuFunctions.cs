@@ -140,4 +140,12 @@ public partial class MainMenuFunctions : CanvasLayer
 	}
 
 	#endregion
+	
+	
+	public void _on_main_menu_music_finished()
+	{
+		mainmenu_Music.VolumeDb = -80f;
+		mainmenu_Music.Play();
+		isLerpingMainMenuMusic = true;
+	}
 }

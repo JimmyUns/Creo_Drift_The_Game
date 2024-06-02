@@ -110,12 +110,10 @@ scale_curve = SubResource("CurveTexture_uojkw")
 [node name="Player" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.30314, 0)
 
-[node name="Vehicle Body Controller" type="Node" parent="." node_paths=PackedStringArray("groundcheckRay", "wallcheckkRay1", "wallcheckkRay2", "vBody", "vBody_Model", "particlesController")]
+[node name="Vehicle Body Controller" type="Node" parent="." node_paths=PackedStringArray("groundcheckRay", "vBody", "vBody_Model", "particlesController")]
 script = ExtResource("1_2rbhi")
 steeringStrength = 1.5
 groundcheckRay = NodePath("../Body/Raycast\'s/Ground Check")
-wallcheckkRay1 = NodePath("../Body/Raycast\'s/Wall Check Ray 1")
-wallcheckkRay2 = NodePath("../Body/Raycast\'s/Wall Check Ray 2")
 vBody = NodePath("../Body")
 vBody_Model = NodePath("../Body/Car_Model")
 particlesController = NodePath("../Particles Controller")

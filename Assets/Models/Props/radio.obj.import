@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://u6ncu6mt72t2"
+path="res://.godot/imported/radio.obj-7036fafbf57f62f04d9eeabc2ab7c31b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/radio.obj-7036fafbf57f62f04d9eeabc2ab7c31b.mesh"]
+
+source_file="res://Assets/Models/Props/radio.obj"
+dest_files=["res://.godot/imported/radio.obj-7036fafbf57f62f04d9eeabc2ab7c31b.mesh", "res://.godot/imported/radio.obj-7036fafbf57f62f04d9eeabc2ab7c31b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
